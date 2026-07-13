@@ -8,6 +8,31 @@ Evidence that **GRIP – Enhanced Macro Sequencer (GRIP-EMS)** and its associate
 
 ---
 
+## ★ START HERE (for Timothy)
+
+This package now covers **two things**:
+
+### Part A — Response to the "GSE Companion disclosure" & Kephas video *(defensive, time-sensitive)*
+Rebuts the public claim that the GSE Companion app spies on / deletes users' data. **Short answer:** the delete routine was gated behind a server flag (`enforce`) that was **off on every date the discloser himself recorded it** — it never ran, and it's removed from the current build. We win on facts, not denial.
+
+| File | What it is |
+|---|---|
+| `RESPONSE-brief-for-Tim.html` | **One page — read this first.** Print → Save as PDF. |
+| `RESPONSE-to-companion-disclosure.html` | Full public/community rebuttal. |
+| `discord-announcement-DRAFT.md` | Ready-to-post Discord message (3 lengths). |
+| `evidence/companion-app/COMPANION-FORENSIC-FINDINGS.md` | The receipts — hash-anchored, line-cited. |
+| `evidence/companion-app/claim-screenshots/` | **The video's actual slides** (full-res PNG) with a reading-order `INDEX.md` mapping each claim to our answer. Start with its `INDEX.md`. |
+| `evidence/companion-app/discloser-own-evidence/` | The discloser's **own** files that prove our point: `hashes.txt` + `live_access_policy_*.json` (all show `enforce: false`). |
+
+**⚠ Before publishing Part A:** you must personally confirm (1) `enforce` was **never** set true server-side, and (2) the diagnostic-upload path was **never** used to pull a user's files. The code and his own captures point that way, but you're the authority and he has the source. (Details in the findings doc.)
+
+### Part B — The IP case: GRIP / LazyGrip clone & scrape GSE *(offensive)*
+Everything from "The core findings" down. Quick entry points: `dossier.html` (conduct dossier, every quote permalinked — open in a browser), `evidence/discord/THE-STORY.md` (plain-English narrative), and `exhibits/` (line-cited code).
+
+> **Operator identity (updated):** the GRIP-EMS addon author is **`sirsataana` / "Sataana"** (CurseForge), whose own publicly-linked accounts resolve to **Jesper Driessen** (GitHub `JesperLive`, Facebook `JesperDriessen`, Patreon `cw/JesperLive`) — *confirm before any filing.* LazyGrip.net registrant is privacy-redacted (NameCheap, created 2026-05-03); ownership is anonymized but circumstantially the same operator. See `evidence/discord/captures.md` → "OWNERSHIP & IDENTITY".
+
+---
+
 ## The players & timeline (to be finalized with dates from the Discord/CurseForge record)
 
 | | Party | Role |
