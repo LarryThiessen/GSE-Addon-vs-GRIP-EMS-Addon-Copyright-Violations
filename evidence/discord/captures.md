@@ -221,6 +221,67 @@ Two "Message could not be loaded" markers appear near Sataana's messages — **d
 
 > Screenshot saved: "patreon" search results (Sataana rationalization + CzarTheMad naming "Slg"/84 paid members) — re-file as `patreon-search-slg-named.png`. **Second most evidentially important find, and the most directly on-point for the ScaryLarryGames personal case specifically.**
 
+### ★★★★ DIRECT HIT — "strip" search: explicit knowledge that stripping violates licensing + "how to bypass"
+
+**Search term: "strip" in #general.**
+
+**CzarTheMad (date TBD):**
+> "hypothetically i want to make a version with it **stripped** out and let the masses have it, but we know that'd be against licensing, so if you happen see one out there it wasnt me"
+- **DEVASTATING ADMISSION.** CzarTheMad (a House of Macros MOD) explicitly states, in his own words: (1) the intent to make a "stripped" version and distribute it "to the masses," (2) **explicit, stated knowledge that doing so "would be against licensing,"** and (3) a pre-built alibi ("if you happen see one out there it wasnt me") — i.e., anticipating this exact conduct happening and pre-denying involvement. This is about as close to a direct admission of knowing, intentional license violation as evidence gets.
+
+**Pershizzle (date TBD):**
+> "I made a new sequence and stripped it down to the bare bone to do test to see how many times stuff is casting just to make sure i didnt have anything else messing with it"
+- (Lower relevance — describes stripping down a sequence for personal testing, not the CMI-stripping conduct. Included for completeness/context only.)
+
+### ★★★★★ FULL CONTEXT RECOVERED — the origin of the whole reverse-engineering thread, same 2026-04-30 conversation
+
+Clicking into the "strip"/"bypass" search hit revealed this is the **beginning** of the SAME conversation as the "Clean-Room"/AGPL/AI thread captured earlier — i.e., all of the following and the "Clean-Room" thread above are ONE continuous exchange on 2026-04-30. Full transcript, in order, exact wording confirmed by direct zoom of the message pane:
+
+**Sataana:**
+> "Yup Yup, its been bothering me as well, not sure when or how it happened, but its on my list"
+
+**Sataana:**
+> "The challenge is to convert every single option, field, data, text etc etc that GSE / EMS has and make it compatible with each other, as well as be included properly within the strings 🙃
+> Oh, and ofcourse, **how to bypass the new GSE security system that wont allow import unless it includes some sort of secret stuff encoded by their gse tools website thing**
+> See, what the website is doing (transforming GSE to EMS) the add-on currently does. the problem is that when TL puts in so many ever changing variables and things that are take so much effort and time to decode / be unobscured / decipher just to get it to import in to EMS...
+> At what point does it become too much trouble, and at what point is it really even still needed"
+- **★★★★★ THE SINGLE MOST DIRECT STATEMENT IN THE ENTIRE RECORD.** Sataana literally uses the words **"how to bypass the new GSE security system"** — an unambiguous, first-person statement identifying GSE's protective encoding as a security system, and identifying the goal as bypassing it. This is not an inference from code; it is Sataana's own description of his own objective, in writing, in a public dev channel.
+
+**MFDOOM (to Sataana, tagged directly):**
+> "@Sataana just a small annoying one, id like to be able to maybe expand that loop window" [attachment]
+
+**Sataana:**
+> "Okay, I have a question in relation to this.
+> Part of what makes the UI very finnicky to work with (from a dev/coding/designing/debugging standpoint) is that its very 'custom' and not really 'Blizzard Native'
+> I think a lot of things could potentially be resolved if I strip much of it away, but... the flip side of that is that it will look like any other 'basic' GUI/UI.
+> Thoughts? (anyone feel free to inject opinions)"
+- (This particular "strip" reference is about UI simplification, not CMI — included for completeness/accuracy; do not conflate with the CMI-stripping conduct.)
+
+**[in reply to Sataana's "how to bypass the new GSE security system..." message] CzarTheMad:**
+> "Perhaps it would be easier for me to **strip the gse tools stuff from gse**"
+- **DIRECT REPLY TO THE "BYPASS" MESSAGE.** CzarTheMad's proposed solution to Sataana's stated goal ("how to bypass the new GSE security system") is explicitly to "strip the gse tools stuff from gse" — i.e., strip GSE.Tools' protective/identifying data out of GSE content. This is CzarTheMad answering Sataana's bypass question with a stripping method.
+
+**Sataana:**
+> "Well, lets take it back to basics, what is your most basic goal you want to achieve?"
+*(→ this is the start of the "Clean-Room"/AGPL/AI thread already fully captured above — CONFIRMED to be the same continuous 2026-04-30 conversation.)*
+
+**CzarTheMad — CONFIRMED 2026-06-18 16:11:34 UTC** (permalink: https://ptb.discord.com/channels/1209220571678646323/1209220572270297201/1517200109551489094) — **NOT the same day as the bypass/Clean-Room thread; this is ~7 weeks LATER:**
+> "hypothetically i want to make a version with it **stripped** out and let the masses have it, but we know that'd be against licensing, so if you happen see one out there it wasnt me"
+- Direct admission of (1) intent to strip and mass-distribute, (2) express knowledge this violates licensing, (3) pre-built deniability.
+- **★ TIMELINE SIGNIFICANCE:** because this is dated ~7 weeks after the original "how to bypass the new GSE security system" conversation (2026-04-30), it shows the stripping/mass-distribution intent was NOT a single passing remark but a **persistent, recurring topic discussed across months** — strengthening any "pattern of conduct" argument (relevant to the §1202(b) double-scienter "pattern of conduct/modus operandi" theory in `grip-1202-cmi-analysis.md`).
+
+**Combined, this single conversation thread now reads as one continuous arc:**
+1. Sataana states the goal: bypass GSE's security system that blocks import without GSE.Tools-encoded "secret stuff."
+2. CzarTheMad proposes: strip the GSE.Tools stuff out.
+3. Sataana reframes it as a "basic goal" exercise, then proposes reading TL's AGPL-licensed GitHub commits "with AI" to reverse-engineer the system, invoking "Clean-Room" — while disclaiming legal advice/responsibility twice.
+4. Same day, Sataana reports "kind of solved it" with a video.
+5. Same day (later), CzarTheMad states outright that a "stripped" mass-distributable version would be "against licensing" and pre-denies future involvement.
+6. Same day, CzarTheMad separately names "Slg" (ScaryLarryGames) by handle with an exact Patreon paid-member count, in a thread about the pay-Patreon-then-import-to-EMS workflow.
+
+**All of the above occurred within House of Macros #general on 2026-04-30, primarily within the 12:39–21:17 UTC window already anchored by permalinks above.**
+
+> Screenshots saved: full "strip"/"bypass" thread context (Sataana "how to bypass the new GSE security system" + CzarTheMad "strip the gse tools stuff from gse" + "against licensing...wasnt me") — re-file as `strip-search-bypass-origin-full-context.png`. **This is now the centerpiece exhibit of the entire Discord record — supersedes the earlier partial capture as the fuller, more damaging version of the same conversation.**
+
 ### Action items for this thread
 - [x] Get exact date/time for each key message — DONE, decoded from message-ID snowflakes, see table above (authoritative — independent of client display/timezone).
 - [x] Get "Copy Message Link" permalink for the 4 key messages — DONE, see table above.
