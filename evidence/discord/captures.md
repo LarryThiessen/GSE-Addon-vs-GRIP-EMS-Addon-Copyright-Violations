@@ -378,6 +378,37 @@ Clicking into the "strip"/"bypass" search hit revealed this is the **beginning**
 
 > Screenshot saved: "checksum" search result — full Sataana message to "SLG" + HomeTeemo reply — re-file as `checksum-search-sataana-to-SLG-direct.png`. **Confirmed and fully transcribed.**
 
+### Corroboration of the rights holder's GSE United ban action — "banned" search
+
+**Search term: "banned" in #general.** These confirm, from the banned parties' own mouths, the ban action the rights holder described (banning House of Macros members from GSE United and related servers for plagiarizing creators' work).
+
+**Sataana (date TBD, earlier — this is the SAME message already captured under the "grip" search above, cross-referenced here):**
+> "I bet it will say the same damn thing for every single person that is in this discord or the grip discord and is banned from there."
+
+**Sataana (date TBD):**
+> "If SLG was a mod / admin with banning powers on that Discord, I can only assume it was him. I think he said that he banned people from every server he could (id have to fact check the reddit thread though)"
+- Confirms Sataana's understanding: "SLG" (rights holder) banned House of Macros/GRIP-affiliated people "from every server he could" — matches the rights holder's own account almost exactly. References a "reddit thread" as the source, tying back to the CzarTheMad Reddit hit-piece captured earlier.
+
+**Tony_Hronik** *(new name — not on original watch list, add)*:
+> "Anyway it's strange that I was banned on OAK discord too"
+> "Interesting - I was removed from GSE:nited and OAK discord. Also looks like banned as I can't join... hmm..."
+- Confirms the rights holder's ban action reached at least GSE United ("GSE:nited") and "OAK discord" — a related/allied GSE server.
+
+**MFDOOM:**
+> "if you were in that discord youd get banned boi"
+
+**CzarTheMad (@Sataana):**
+> "rtx told me via patron that he talked to you about my ban from his discord?"
+- References a third party "rtx" and Patreon/Patron-based communication about the ban — another name to track ("rtx").
+
+**MFDOOM:**
+> "sorry you got banned dude."
+> "people send screenshots all the time, and i dont really ban people so he could be in [truncated]"
+
+- **Net effect: this fully corroborates the rights holder's account.** The banned parties themselves confirm bans from GSE United and allied servers ("OAK discord"), attribute it correctly to "SLG," and reference the same Reddit thread already captured as a hostile narrative vehicle. New name to track: **Tony_Hronik**, and a referenced third party **"rtx."**
+
+> Screenshot saved: "banned" search results (Sataana ban attribution + Tony_Hronik + MFDOOM + CzarTheMad "rtx") — re-file as `banned-search-corroboration.png`.
+
 ### Action items for this thread
 - [x] Get exact date/time for each key message — DONE, decoded from message-ID snowflakes, see table above (authoritative — independent of client display/timezone).
 - [x] Get "Copy Message Link" permalink for the 4 key messages — DONE, see table above.
