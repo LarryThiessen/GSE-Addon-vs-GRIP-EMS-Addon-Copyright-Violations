@@ -473,8 +473,9 @@ Clicking into the "strip"/"bypass" search hit revealed this is the **beginning**
 > The warning all the AIs give about checking it and it can be wrong, is true most of the time 😅"
 - **Confirms Sataana pays for Claude's top-tier ($200/mo) plan and uses it as his primary, heavy-usage development tool** — not casual/occasional use. This is a serious, funded, professional-grade AI development workflow.
 
-**Tony_Hronik:**
-> "I'm not a programmer or product owner —" [message continues, cut off in capture]
+**Tony_Hronik (full message, re-captured):**
+> "I'm not a programmer or product owner — so yes dictated short idea to Claude (in Russian))) and asked to describe it like feature for EMS ))"
+- **COMPLETES the earlier cut-off capture.** Tony_Hronik explicitly describes **dictating a feature idea to Claude in Russian and having it write up a formal feature description for EMS** — i.e., a non-developer using AI to directly generate feature/product content that goes into GRIP-EMS. Concrete, specific evidence of AI being used to produce actual EMS feature material, not just abstract "I use AI" chat.
 
 **Why this matters:** across both servers, in Sataana's own words, AI (specifically Claude, at the $200/mo tier) is his primary and heavily-used development tool ("All my shit is Claude"). Combined with the 2026-04-30 House of Macros conversation where he specifically proposed using AI to read Timothy Luke's licensed GitHub commits to "figure out the system," this establishes both **capability and demonstrated habitual practice** — he had the tool, used it constantly, and proposed using it for exactly the reverse-engineering task at issue.
 
