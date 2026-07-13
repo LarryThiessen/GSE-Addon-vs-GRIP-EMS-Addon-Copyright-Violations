@@ -10,6 +10,8 @@ Evidence that **GRIP – Enhanced Macro Sequencer (GRIP-EMS)** and its associate
 
 ## ★ START HERE (for Timothy)
 
+**Open [`START HERE.html`](<START HERE.html>) in any web browser** (just double-click). It's a self-contained page — no internet needed — that walks the whole chain of events in order, with every Discord message and both LazyGrip exhibits embedded, plus a plain-English "what GRIP is" and an honest "proven vs. not-proven" section. Print → Save as PDF to share. It presents Part B below; Part A (the companion-app response) is linked from it.
+
 This package now covers **two things**:
 
 ### Part A — Response to the "GSE Companion disclosure" & Kephas video *(defensive, time-sensitive)*
@@ -27,7 +29,7 @@ Rebuts the public claim that the GSE Companion app spies on / deletes users' dat
 **⚠ Before publishing Part A:** you must personally confirm (1) `enforce` was **never** set true server-side, and (2) the diagnostic-upload path was **never** used to pull a user's files. The code and his own captures point that way, but you're the authority and he has the source. (Details in the findings doc.)
 
 ### Part B — The IP case: GRIP / LazyGrip clone & scrape GSE *(offensive)*
-Everything from "The core findings" down. Quick entry points: `dossier.html` (conduct dossier, every quote permalinked — open in a browser), `evidence/discord/THE-STORY.md` (plain-English narrative), and `exhibits/` (line-cited code).
+Everything from "The core findings" down. **Best entry point: [`START HERE.html`](<START HERE.html>)** — a self-contained page (open in any browser) that walks the whole chain of events in order, with every Discord message and both LazyGrip exhibits embedded. Deeper: `evidence/discord/THE-STORY.md` (plain-English narrative), `evidence/discord/captures.md` (verbatim log + permalinks), and `exhibits/` (line-cited code).
 
 > **Operator identity (updated):** the GRIP-EMS addon author is **`sirsataana` / "Sataana"** (CurseForge), whose own publicly-linked accounts resolve to **Jesper Driessen** (GitHub `JesperLive`, Facebook `JesperDriessen`, Patreon `cw/JesperLive`) — *confirm before any filing.* LazyGrip.net registrant is privacy-redacted (NameCheap, created 2026-05-03); ownership is anonymized but circumstantially the same operator. See `evidence/discord/captures.md` → "OWNERSHIP & IDENTITY".
 
