@@ -409,6 +409,77 @@ Clicking into the "strip"/"bypass" search hit revealed this is the **beginning**
 
 > Screenshot saved: "banned" search results (Sataana ban attribution + Tony_Hronik + MFDOOM + CzarTheMad "rtx") — re-file as `banned-search-corroboration.png`.
 
+---
+
+## SECOND SERVER: "GRIP / Temptation / Sataana" (Sataana's own Discord)
+
+**Server:** GRIP / Temptation / Sataana — Sataana's own server, structurally larger/more formal than House of Macros. Channel categories include GRIP (announcements, grip-ems, grip-guild-recruitment, grip-ems-resources, grip-ems-sharing, lazygrip, faq, grip-bug-reports, grip-feature-requests, grip-ems-media, ems-sequence-help, plugins, Support) and **"EMS Sequence Creators"** — a category of individually-named channels per creator: ems-unified-gaupanda, mfdoom, pershizzle, **slowdog**, ruinsii, 2complex4ao3, kohtas. Roles visible: Nitro Booster (Sataana·Artfixs), GRIP Plugin Dev (BeardBd_Bod), Frogmaster (MFDOOM, Nuevo, Pershizzle), Supporter, World of Warcraft (~50 members).
+
+**Note:** this is very likely the separate **"GRIP Discord"** Sataana referenced in House of Macros ("you are not allowed to be in HoM or GRIP Discord") — i.e., this server is the private/semi-private venue flagged as an #unknown gap in the House of Macros capture. Confirms that gap was correctly identified.
+
+**Sweep method: same priority terms (grip/gse/claude/patreon/strip/checksum/banned/bypass), same named individuals, same 2026-04-30-adjacent timeframe, applied via Discord search in this server.**
+
+### "bypass" search — 3 results, NOT relevant to GSE (logged for completeness/negative result)
+
+**MFDOOM:** "hackerman found a bypass"
+
+**Sataana·Artfixs:** long technical explanation of a **WoW engine taint/security issue** (UnitHealth()/UnitHealthMax() returning "secret" tainted values from addon-compiled/loadstring code, and using `C_CurveUtil.CreateCurve()` to bypass Lua taint restrictions) — this is a **legitimate, well-documented WoW addon-development workaround for Blizzard's own combat-data protection system**, unrelated to GSE. Included here only to show the search was run and returned nothing GSE-relevant on this term in this server.
+
+### "gse" search — 2 results in GRIP/Temptation/Sataana
+
+**DrahgunFyre (#public-chat, date TBD):**
+> "hey guys have you seen the new thekephas vid on youtube https://www.youtube.com/watch?v=2LwqvfDTiFY&t=301s"
+- Links a YouTube video by **"TheKephas"** titled **"We Need to Talk About the GSE Addon Community | World of Warcraft A..."** with thumbnail "What's Going On WITH GSE?" — **this is the SAME video/content already identified via the Reddit hit-piece CzarTheMad shared in House of Macros.** Confirms "TheKephas" as the identified author of the anti-GSE video, and shows it circulated in BOTH House of Macros and GRIP/Temptation/Sataana — cross-server promotion of the same hostile narrative.
+
+**Sataana·Arthas (#grip-ems, forwarded message, ~5/26/2026 per visible date):**
+> [Forwarded from an unnamed user] "@Sataana·Arthas Hey would it be possible to pay for some support? I wanna switch over from GSE to GRIP but don't really know how to navigate it's a whole new thing for me it would honestly take hours for me to figure by myself"
+- A real end-user requesting **paid support specifically to migrate from GSE to GRIP.** Relevant context: shows monetized support/onboarding activity built around GSE→GRIP migration exists, forwarded by Sataana himself (implying he found it noteworthy enough to share/forward — possibly as validation of demand for the GSE-import feature).
+
+### "strip" search — 14 results, mostly routine changelog terminology; one notable corroboration
+
+**#grip-bug-reports — GRIP-EMS v2.3.6 release changelog (released Friday, July 10, 2026):**
+> "...imports track their source closer — **a Priority loop keeps its weighted pattern instead of flattening to an even split.**"
+- **Corroborates the forensic code-diff finding** (`grip-vs-gse-forensic-comparison.md` Part 1, B1): GRIP's own official release notes confirm the team specifically preserves GSE's distinctive Priority weighted-expansion pattern on import — an admission, from their own changelog, that reproducing this specific GSE behavior is a deliberate, tracked feature, not an accident.
+- Other "strip" hits on this page (stripping syntax-highlight colors on save, etc.) are ordinary code/UI terminology, not CMI-relevant — not logged individually.
+- Confirms current shipped version as of this capture: **GRIP-EMS v2.3.6**, released 2026-07-10.
+
+### ★★★★★ "claude" search in GRIP/Temptation/Sataana — 8 results, Sataana: "All my shit is Claude"
+
+**This is the single strongest direct corroboration of the AI-development method found across both servers.**
+
+**TheKuhtas (#grip-ems, date TBD):**
+> "Maybe I'll run it through Claude and see what it thinks."
+
+**Sataana·Arthas (#grip-ems, date TBD):**
+> **"All my shit is Claude"**
+- **★★★★★ Unambiguous, first-person, present-tense admission from the GRIP developer that his development work is done with Claude.** This is not a hypothetical or a one-off — it is a blanket statement about his own working method, directly corroborating the 2026-04-30 House of Macros conversation where he proposed using AI to study Timothy Luke's commits, and his separate demonstrated combat-log-parsing method.
+
+**TheKuhtas:**
+> "Yea I use Gemini to fine tune mine, haven't tried Claude."
+
+**MFDOOM:**
+> "claude and gemini seem best at lua understanding and tasking."
+- Confirms MFDOOM (House of Macros "Operations" role, active in both servers) also uses AI for Lua development specifically.
+
+**Sokan (marked "RAID"):**
+> "Thanks, I turned that off meaning to ask the same thing, been using claude to calculate it manually"
+
+**Tony_Hronik** *(same name flagged earlier re: bans)*:
+> "So it's possible to create addon modifications with Claude — add features 🙂..."
+
+**Sataana·Arthas:**
+> "I think I've said it before. But over half of my monthly 'usage' is spent on just making sure my AI behaves and knows things. And I'm on the 200 dollar plan from Claude.
+>
+> The warning all the AIs give about checking it and it can be wrong, is true most of the time 😅"
+- **Confirms Sataana pays for Claude's top-tier ($200/mo) plan and uses it as his primary, heavy-usage development tool** — not casual/occasional use. This is a serious, funded, professional-grade AI development workflow.
+
+**Tony_Hronik:**
+> "I'm not a programmer or product owner —" [message continues, cut off in capture]
+
+**Why this matters:** across both servers, in Sataana's own words, AI (specifically Claude, at the $200/mo tier) is his primary and heavily-used development tool ("All my shit is Claude"). Combined with the 2026-04-30 House of Macros conversation where he specifically proposed using AI to read Timothy Luke's licensed GitHub commits to "figure out the system," this establishes both **capability and demonstrated habitual practice** — he had the tool, used it constantly, and proposed using it for exactly the reverse-engineering task at issue.
+
+> Screenshot saved: "claude" search results in GRIP/Temptation/Sataana (Sataana "All my shit is Claude" + $200/mo plan + Tony_Hronik) — re-file as `claude-search-temptation-all-my-shit-is-claude.png`.
+
 ### Action items for this thread
 - [x] Get exact date/time for each key message — DONE, decoded from message-ID snowflakes, see table above (authoritative — independent of client display/timezone).
 - [x] Get "Copy Message Link" permalink for the 4 key messages — DONE, see table above.
