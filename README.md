@@ -23,6 +23,7 @@ Rebuts the public claim that the GSE Companion app spies on / deletes users' dat
 | `RESPONSE-to-companion-disclosure.html` | Full public/community rebuttal. |
 | `discord-announcement-DRAFT.md` | Ready-to-post Discord message (3 lengths). |
 | `evidence/companion-app/COMPANION-FORENSIC-FINDINGS.md` | The receipts — hash-anchored, line-cited. |
+| `evidence/companion-app/COMPANION-APP-FIX.md` | **The one thing to actually fix on the app** — the unsigned diagnostic upload: sign it, make it opt-in, scope it. A dev to-do for Tim. |
 | `evidence/companion-app/claim-screenshots/` | **The video's actual slides** (full-res PNG) with a reading-order `INDEX.md` mapping each claim to our answer. Start with its `INDEX.md`. |
 | `evidence/companion-app/discloser-own-evidence/` | The discloser's **own** files that prove our point: `hashes.txt` + `live_access_policy_*.json` (all show `enforce: false`). |
 
