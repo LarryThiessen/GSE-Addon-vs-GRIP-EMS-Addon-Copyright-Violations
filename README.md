@@ -44,7 +44,8 @@ The single most important nexus fact: **the same operator (sirsataana/Sataana) i
 | `exhibits/grip-lazygrip-webtool-exhibit.md` | The public LazyGrip web tools: on-demand plaintext reproduction + server-side owner-ID stripping. |
 | `exhibits/SLG-Sequences-LICENSE-downstream-creator-example.txt` | A downstream creator's All-Rights-Reserved license (ScaryLarryGames) — example of the licensed content the pipeline ingests. |
 | `evidence/lazygrip-webtool/` | Reproducible decode evidence (original + decoded; before/after convert). |
-| `evidence/discord/` | **TO GATHER** — House of Lazy Macros Discord record of coordination/intent (last ~4–5 months). |
+| `evidence/discord/THE-STORY.md` | **★ Start here.** Plain-English narrative of the House of Macros Discord record — the story in their own words, chronological, for a non-technical reader (Larry, Timothy, or counsel). |
+| `evidence/discord/captures.md` | Full verbatim capture log backing the story above — every quote, decoded UTC timestamp, and permalink. |
 | `data/grip_version_scan.csv` | Per-version scan of all 64 GRIP releases. |
 
 ---
