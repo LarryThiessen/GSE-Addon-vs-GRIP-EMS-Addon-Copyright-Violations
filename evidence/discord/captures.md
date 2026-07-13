@@ -480,6 +480,53 @@ Clicking into the "strip"/"bypass" search hit revealed this is the **beginning**
 
 > Screenshot saved: "claude" search results in GRIP/Temptation/Sataana (Sataana "All my shit is Claude" + $200/mo plan + Tony_Hronik) — re-file as `claude-search-temptation-all-my-shit-is-claude.png`.
 
+### ★★★★★ "patreon" search in GRIP/Temptation/Sataana — MFDOOM admits sharing Patreon-locked content, describes creator's reaction
+
+**#grip-ems-sharing, Gofx (marked "VLAP"), date TBD:**
+> "Are your macros in the $5 patreon the same thing as sequence imports?"
+- Confirms a $5-tier Patreon exists for at least one creator's macros being discussed/compared to GRIP sequence imports.
+
+**#grip-ems, MFDOOM, date TBD:**
+> "patreon only chats lmao"
+
+**#grip-ems, MFDOOM, date TBD (directly following):**
+> **"if you were in my discord — he got you, he spazzed out on us pretty hard cuz we shared the patreon edition that you can get from their own bot/site."**
+- **★★★★★ DIRECT, FIRST-PERSON ADMISSION OF SHARING PATREON-LOCKED CONTENT.** MFDOOM openly states, in writing: (1) he/his group **shared "the patreon edition"** of someone's content — i.e., paywalled content — obtained via "their own bot/site" (very likely GSE.Tools, the creator's distribution mechanism), (2) the creator ("he") found out and reacted strongly ("spazzed out on us pretty hard"), and (3) this happened in "my discord" (a discord MFDOOM runs or is central to). **This is precisely the conduct the rights holder described as the reason for banning House of Macros members — a creator's Patreon-gated content being redistributed for free — confirmed in the redistributor's own words.**
+**CONFIRMED: 2026-06-17 21:17:45 UTC.** Permalink: https://ptb.discord.com/channels/170244820910997504/1484343595967184897/1516914774187708568 (confirms this channel = the exact `#grip-ems` channel ID the rights holder originally provided.)
+
+**Full surrounding context, confirmed by direct zoom (#grip-ems, all same conversation):**
+
+**Wildside (tagged "HUNT"):** "it is accurate though"
+
+**MFDOOM (2026-06-17 ~21:17 UTC):**
+> "if you were in my discord — he got you. he spazzed out on us pretty hard cuz we shared the patreon edition that you can get from their own bot/site"
+
+**Sataana·Arthas (immediately following):**
+> "I think up to a point that version was shared in MANY Discords"
+
+**Wildside:**
+> "well I was there just to say hi and keep in touch with what was new"
+
+**Sataana·Arthas:**
+> **"Hence, never a paid version of EMS 😄 Drama voided 😤"**
+- **★★★★★ SIGNIFICANT.** Sataana directly states that this exact incident — sharing a creator's Patreon-paywalled content, obtained from "their own bot/site," across "MANY Discords," provoking the creator to "spazz out" — is the reason **GRIP-EMS itself was never made a paid product** ("never a paid version of EMS... Drama voided"). This is Sataana acknowledging, after the fact, that the redistribution happened, was widespread, and had real consequences for the creator — while treating the outcome ("Drama voided") as a joke/win rather than a wrongdoing.
+
+**MFDOOM:** "it was good to see and hear from you wildside enjoy topping the dps meters ❤️"
+
+**Wildside:** "Thanks and same"
+
+**MFDOOM (further down):** "its up by @Slowdog and @BeardBd_Gamer they've done a tremendous job" [truncated]
+
+**BeardBd_Gamer:** "more of @Slowdog i just provide some additional features he could use just to add the icing on the cake" [truncated]
+
+### Timeline connection — one day apart, two servers, same conduct
+
+**This 2026-06-17 21:17:45 UTC admission (GRIP/Temptation/Sataana) is dated exactly ONE DAY before CzarTheMad's 2026-06-18 16:11:34 UTC admission in House of Macros** ("hypothetically i want to make a version with it stripped out and let the masses have it, but we know that'd be against licensing, so if you happen see one out there it wasnt me"). Two different servers, two different named individuals (MFDOOM/Sataana here; CzarTheMad there), describing/discussing the same category of conduct — sharing paywalled creator content — within 24 hours of each other. This strengthens the "pattern of conduct / modus operandi" argument (the §1202(b) theory in `grip-1202-cmi-analysis.md`) considerably: this was not an isolated incident in either server, but an ongoing, recurring topic across the whole GRIP/House of Macros/Temptation ecosystem.
+
+- **Open item:** identify which creator "he" refers to in MFDOOM's message — not yet confirmed as the rights holder specifically (could be the rights holder or another GSE creator). The "$5 patreon" question earlier on the same page (Gofx: "Are your macros in the $5 patreon the same thing as sequence imports?") may or may not be about the same creator — needs a read of the full unbroken thread to link them definitively.
+
+> Screenshot saved: "patreon" search results + full thread context in GRIP/Temptation/Sataana (MFDOOM "shared the patreon edition... he spazzed out on us" + Sataana "never a paid version of EMS... Drama voided") — re-file as `patreon-search-temptation-mfdoom-admission.png`. **Confirmed, dated, and cross-referenced with the House of Macros 06-18 admission.**
+
 ### Action items for this thread
 - [x] Get exact date/time for each key message — DONE, decoded from message-ID snowflakes, see table above (authoritative — independent of client display/timezone).
 - [x] Get "Copy Message Link" permalink for the 4 key messages — DONE, see table above.
