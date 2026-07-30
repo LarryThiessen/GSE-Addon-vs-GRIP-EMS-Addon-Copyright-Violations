@@ -95,16 +95,22 @@
   <h2><span class="n">05</span>&ldquo;GSE surveils and bans people for using GRIP&rdquo; &nbsp; <span class="verdict v-false">Misframed</span></h2>
   <p>There is no automated &ldquo;detect‑and‑ban&rdquo; dragnet. Specific people were removed from community Discords <strong>by human admins</strong>, for a documented reason: they organised to scrape creators&rsquo; <strong>All‑Rights‑Reserved</strong> sequences, convert them, strip the ownership identifier, and redistribute them. That is moderation of a specific, evidenced pattern of conduct &mdash; not surveillance of ordinary users.</p>
 
-  <h2><span class="n">06</span>Where the disclosure has a fair point &mdash; and what we&rsquo;re doing</h2>
-  <p>Credibility means conceding what&rsquo;s real. There is a <strong>diagnostic file‑gathering path</strong> in the Companion app that can, on a server request, read files from the WoW folders (including addon error logs) and upload them. Unlike the delete routine, it is <strong>not</strong> behind the <code>enforce</code> switch. We have found no evidence it was used to pull anyone&rsquo;s files, but the right answer is not to argue about it &mdash; it&rsquo;s to fix it:</p>
+  <h2><span class="n">06</span>Where the disclosure has a fair point &mdash; and what has changed since</h2>
+  <p>Credibility means conceding what&rsquo;s real. In the build the disclosure examined (<strong>0.4.22</strong>) there was a <strong>diagnostic file‑gathering path</strong> that could, on a server request, read files from the WoW folders &mdash; including addon error logs &mdash; and upload them. Unlike the delete routine, it was <strong>not</strong> behind the <code>enforce</code> switch. We found no evidence it was ever used to pull anyone&rsquo;s files. Rather than argue the point, here is precisely what is different in the current build:</p>
   <div class="box">
-    <div class="lbl">Committed changes (fill in / confirm with Tim)</div>
+    <div class="lbl">What changed, as of 0.4.26</div>
     <ul style="margin:0">
-      <li>Require an <strong>ed25519 signature</strong> on every diagnostic gather/upload request (same gate the destructive path already uses).</li>
-      <li>Make diagnostic collection <strong>explicit and opt‑in</strong>, tied to a user‑initiated bug report only.</li>
-      <li>Restrict reads to <strong>GSE&rsquo;s own files</strong>; publish exactly what a bug report attaches.</li>
+      <li><strong>Addon error logs are no longer collected.</strong> The request for them is discarded before any file is gathered, so the BugGrabber/BugSack logs cannot be pulled even if something asks for them.</li>
+      <li><strong>Credentials are stripped from anything sent.</strong> Access tokens and session data are removed from diagnostic payloads.</li>
+      <li><strong>Reads are limited to GSE&rsquo;s own files</strong> in the always‑on path &mdash; not other addons&rsquo;, not arbitrary server‑named paths.</li>
+      <li><strong>A file request now raises a visible notification</strong> rather than happening quietly.</li>
     </ul>
   </div>
+  <div class="box">
+    <div class="lbl">Still outstanding &mdash; stated plainly</div>
+    <p style="margin:.2rem 0">Each individual request is <strong>not yet cryptographically signed</strong>. It requires an authenticated session and a freshly‑issued token, but not the per‑request <code>ed25519</code> signature the destructive path already uses. That hardening is still to come. We would rather publish that here than have someone else point it out.</p>
+  </div>
+  <p style="font-size:.92em;opacity:.85">Everything in this section is checkable in the shipped application, not a promise about intentions. Version <strong>0.4.26</strong> and later; build hash <code>[to be filled from a clean install]</code>.</p>
 
   <div class="opt">
     <div class="lbl">Optional &mdash; Tim &amp; Larry&rsquo;s call (consider legal review before publishing)</div>

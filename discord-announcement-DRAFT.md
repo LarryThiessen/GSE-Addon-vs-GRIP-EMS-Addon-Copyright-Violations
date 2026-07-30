@@ -1,6 +1,6 @@
 # Discord announcement — DRAFT (review with Tim before posting)
 
-> Fits in one Discord message (~1,750 chars). Two shorter variants below.
+> Fits in one Discord message (under the 2,000-char limit). Two shorter variants below.
 > ⚠️ Before posting: Tim should confirm (1) `enforce` was never set true, and (2) the diagnostic upload was never used. The evidence points that way, but he's the authority.
 
 ---
@@ -17,7 +17,12 @@ You may have seen a claim that the GSE Companion app spies on you or deletes oth
 
 **Nobody was auto-banned for using another addon.** Specific people were removed by admins for organizing to scrape, convert, strip the ownership tag from, and redistribute creators' All-Rights-Reserved sequences.
 
-**One fair point — and we're already on it.** There's a diagnostic file-gathering path we're tightening: signing every request and limiting it to opt-in bug reports. Your privacy matters to us and we'd rather fix it than argue about it.
+**One fair point — and it's already been hardened.** The video pointed at something real: a diagnostic path that could gather WoW-folder files and upload them on a server request. In **0.4.26**:
+
+- **Addon error logs aren't collected at all** — the request is discarded before any file is read — and **credentials are stripped** from anything sent.
+- **Reads are limited to GSE's own files**, not other addons' or arbitrary paths, and **file requests now notify you** instead of happening quietly.
+
+**Still to come:** signing each request individually — not done yet, and we'd rather say so.
 
 **Verify it yourself** (same bytes we all have):
 ```
@@ -31,10 +36,10 @@ Please **don't harass anyone** — not the creator of the video or anyone named.
 
 ## Short version (~600 chars)
 
-**Re: the GSE Companion video.** Quick facts: (1) **Nobody's data was deleted** — the "delete" code was behind a server switch that was OFF the whole time (it's in the discloser's *own* captures: `"enforce": false` on 3 dates), and it's since been removed. (2) **The addon is free** — full sets are public on CurseForge; nothing is sold. (3) There's one fair point — a diagnostic upload path — and **we're already tightening it** (signing + opt-in). Verify the build hash yourself if you like. Please don't harass anyone. Questions welcome.
+**Re: the GSE Companion video.** Quick facts: (1) **Nobody's data was deleted** — the "delete" code was behind a server switch that was OFF the whole time (it's in the discloser's *own* captures: `"enforce": false` on 3 dates), and it's since been removed. (2) **The addon is free** — full sets are public on CurseForge; nothing is sold. (3) There's one fair point — a diagnostic upload path — and **it's already been hardened** in 0.4.26: addon error logs are no longer collected at all, credentials are stripped from anything sent, reads are limited to GSE's own files, and file requests now notify you. Still to come: signing each request individually — saying so rather than overclaiming. Verify the build yourself if you like. Please don't harass anyone. Questions welcome.
 
 ---
 
 ## One-liner (for a pinned reply / quick response)
 
-The "delete your data" claim is about code that never ran — the trigger flag was `false` on every date the discloser himself recorded (it's in his own repo), and it's been removed from the current build. The addon is free. We're tightening the one diagnostic path that was a fair concern. Verify the hashes yourself.
+The "delete your data" claim is about code that never ran — the trigger flag was `false` on every date the discloser himself recorded (it's in his own repo), and it's been removed from the current build. The addon is free. The one diagnostic path that was a fair concern has been hardened in 0.4.26 — error logs no longer collected, credentials stripped, GSE-only reads, and file requests now notify you; per-request signing is still to come. Verify the hashes yourself.

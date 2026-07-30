@@ -62,8 +62,14 @@
     </div>
   </div>
 
-  <h2><span class="n">4</span>The one fair point &mdash; fix, don&rsquo;t argue &nbsp;<span class="tag fix">ACTION</span></h2>
-  <p>An <b>unsigned</b> diagnostic gather/upload (SSE <code>companion:request</code> &rarr; <code>zo()</code> &rarr; <code>/diagnostic/upload</code>) reads WoW-folder files, including addon error logs, and is <b>not</b> behind <code>enforce</code>. No evidence of misuse found, but tighten it: <b>(a)</b> ed25519-sign every gather/upload request (same gate the destructive path uses); <b>(b)</b> make collection opt-in, tied to a user-initiated bug report only; <b>(c)</b> restrict reads to GSE&rsquo;s own files and publish exactly what a report attaches. <i>&larr; confirm what you&rsquo;ll actually ship.</i></p>
+  <h2><span class="n">4</span>The one fair point &mdash; mostly shipped, one item open &nbsp;<span class="tag fix">STATUS</span></h2>
+  <p>In <b>0.4.22</b> (the build the disclosure is about) an <b>unsigned</b> diagnostic gather/upload (SSE <code>companion:request</code> &rarr; <code>zo()</code> &rarr; <code>/diagnostic/upload</code>) read WoW-folder files, including addon error logs, and was <b>not</b> behind <code>enforce</code>. No evidence of misuse was found. <b>Re-checked in 0.4.26 on 2026-07-29:</b></p>
+  <ul>
+    <li><b>(a) Sign every request &mdash; NOT done.</b> Still gated on an authenticated session plus a freshly-refreshed bearer token rather than a per-request ed25519 signature. <i>&larr; this is the remaining item.</i></li>
+    <li><b>(b) Opt-in &mdash; partly.</b> A <code>requestFiles</code> flag now raises a user-visible desktop notification; the <code>kinds</code> gather still runs on a server request.</li>
+    <li><b>(c) Scope it down &mdash; largely done.</b> The gather now force-drops the <code>errorlogs</code> kind before collecting, so the BugGrabber/BugSack reader is unreachable from a server request; <code>settings</code> ships with <code>accessToken</code> and <code>userSession</code> deleted; the always-on portion is a GSE-only gather.</li>
+  </ul>
+  <p><i>Fill in the shipped <code>app.asar</code> SHA-256 for 0.4.26 from a clean install before this is quoted publicly &mdash; a developer machine with the asar unpacked will not give the shipped bytes.</i></p>
 
   <div class="cap"><b>Confirm before anything goes public (only you can):</b> (1) <code>enforce</code> was <b>never</b> set true, and (2) the diagnostic upload was <b>never</b> used to pull a user&rsquo;s files. The code and his captures point that way, but you are the authority and he has the source. The winnable fight is the <b>facts above</b> (and, separately, the IP case re: scraping/redistribution) &mdash; not a general denial.</div>
 
