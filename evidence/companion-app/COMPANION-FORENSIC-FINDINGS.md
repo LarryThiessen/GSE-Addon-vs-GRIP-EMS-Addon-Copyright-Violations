@@ -10,11 +10,20 @@
 
 **Timothy Luke (GSE author and operator of `api.gse.tools`), 2026-07-29, verbatim:**
 
-> "IT went to a dead end that was never monitored, captured or logged. There was no server enforce to be able to set to \"true\". There was a webpage which had a \"swtich\" on it that loked like it did something but it was unable to be pressed.
+> IT went to a dead end that was never monitored, captured or logged.  The dead end wasnt even owned by me.  I have a total of zero data about anyone using grip.  There was no server enforce to be able to set to"true".  There was a webpage which had a "swtich" on it that loked like it did something but it was unable to be pressed.
 >
-> The diagnostic is something else entirely. It uploaded GSE.lua and the the companion files. thats it. The function has been updated where a user could choose to upload other files at their discretion"
+> The diagnostic is something else entirely.  It uploaded GSE.lua and the the companion files.  thats it.   The function has been updated where a user could choose to upload other files at their discretion *(edited)*
+>
+> All the diag uploads have been tied to a user initiated request.
 
-*(Quoted as written, typos included, per this package's no-paraphrase rule for quotations.)*
+*(Quoted as written — typos, spacing and the client's "(edited)" marker included, per this package's no-paraphrase rule. The same statement is recorded in the `GRIP-IP-Complaint` package as `evidence/companion-app/OPERATOR-STATEMENT-2026-07-29.md`.)*
+
+**Two further points in that statement, easy to miss and both material:**
+
+| | |
+|---|---|
+| **The endpoint was not even his infrastructure** | *"The dead end wasnt even owned by me."* The code pointed at something outside the author's control, which is a stronger position again than "it pointed somewhere I never used." |
+| **He holds no data on GRIP users at all** | *"I have a total of zero data about anyone using grip."* This answers the separate **"GSE surveils and bans GRIP users"** allegation directly, not merely the deletion claim — and it is the operator of the only server that could hold such data saying he has none. |
 
 **Why this matters more than the `enforce: false` captures.** Those captures showed the flag was **false** on three dates. The author's statement is stronger: **there was no server-side `enforce` to set true at all.** The endpoint led to a dead end that was never monitored, captured or logged, and the on-screen "switch" could not even be pressed. So the destructive routine was not "armed and switched off" — **there was never a mechanism capable of arming it.**
 
