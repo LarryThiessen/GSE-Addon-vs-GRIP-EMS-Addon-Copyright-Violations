@@ -108,6 +108,39 @@ He states, plainly, that he knows a stripped, mass-released version would violat
 
 ---
 
+### Off Discord, into public — ≈2026-05 → 2026-07
+
+The people in the record above did not stay in Discord. Over the following weeks the same accounts — matched by Discord user ID — posted publicly against GSE on Reddit and YouTube. Every item is linked in full so a reader can judge it on its own terms.
+
+**A note on these dates.** Unlike every Discord timestamp above — each decoded from the message's own ID — the dates in this era are **approximate**, converted from the relative timestamps the platforms displayed ("2 months ago", "23 days ago") as read on **2026-07-29**, and marked **≈** accordingly. Open any link for its exact date. The Discord user IDs are as supplied by the rights holder; confirm each via "Copy User ID" before any filing.
+
+- **≈2026-05-29 · r/wow — `Zulubyte` = CzarTheMad** (Discord `212047896282005505`): [*"GSE is breaking WoW EULA and banning paying…"*](https://www.reddit.com/r/wow/comments/1u25ulq/gse_is_breaking_wow_eula_and_banning_paying/)
+  → The same CzarTheMad who, on April 30, offered to *"strip the gse tools stuff from gse"* and who later named the rights holder's Patreon by handle and paid-member count.
+
+- **≈2026-05-29 · r/wowaddons — `JesperLive` = Sataana** (Discord `77674000083324928`; CurseForge [`sirsataana`](https://www.curseforge.com/members/sirsataana/projects)): [*"GSE Companion app able to edit/delete other addon…"*](https://www.reddit.com/r/wowaddons/comments/1u3z5j7/gse_companion_app_able_to_edit_delete_other_addon/)
+  → **The nexus point.** The author of GRIP-EMS is personally the publisher of the companion-app disclosure — the same handle as the GitHub repo `JesperLive/gse-companion-disclosure` examined in Part A (`../companion-app/COMPANION-FORENSIC-FINDINGS.md`). Corroborated across CurseForge, GitHub and Reddit, not inferred. The target is GSE's Companion app — the component whose `PlatformID` signing is exactly what GRIP's import drops.
+
+- **≈2026-07-06 · YouTube — TheKephas** (Discord `152017697767555072`): [*"We Need to Talk About the GSE Addon Community | World of Warcraft Addon"*](https://www.youtube.com/watch?v=2Lwqu93TiFY)
+  → **Resolved 2026-07-29.** An earlier draft of this entry spelled the channel *TheKephis*, and `captures.md` had logged the video ID as `v=2LwqvfDTiFY`. Both were settled against an archived capture (`../companion-app/claim-screenshots/02_tim-reply-canary.png`, corroborated by `01_kephas-video-page.png`): the channel is **TheKephas** and the ID is **`2Lwqu93TiFY`**. `captures.md` carries a dated transcription-correction note.
+
+- **≈2026-07-08 · r/wow — `Zulubyte` = CzarTheMad, again**: [*"We Need to Talk About the GSE Addon Community"*](https://www.reddit.com/r/wow/comments/1urdvdj/we_need_to_talk_about_the_gse_addon_community/)
+  → Two days later the same account carries the video across to r/wow under its own title — the second time it posts against GSE in this era. Note this is a *separate, later* post from the r/wow thread he shared in-channel earlier; don't merge the two.
+
+- **≈2026-07-16 · r/wow — `KKthx` = bearded_dad_bod** (Discord `937123324822175775`), the handle credited in-panel for LazyGrip's Workshop decode/convert tools: [*"GSE is gone from CurseForge — they did the right thing"*](https://www.reddit.com/r/wow/comments/1uy32qn/gse_is_gone_from_curseforge_they_did_the_right/)
+  → **The body of this post has since been deleted** — the thread and title remain, the original text does not. Archive whatever survives (comments, caches, archive.today) before that goes too.
+
+---
+
+### Downstream — 2026-07-29: a large channel picks it up
+
+This last item is **not** one of the accounts above. It is a third party with a large audience repeating the narrative, which is what makes it worth recording separately: the story travelled from a private Discord, through the posts above, to a channel reaching far more people than any of them.
+
+- **2026-07-29 · YouTube — Bellular**: [*"A Huge WoW Addon Put Malware On Players' PCs"*](https://www.youtube.com/watch?v=u37h_2yliyY)
+  → **The rights holder's response, on the record:** neither he nor GSE's author was contacted before publication — no request for comment, no opportunity to answer the allegation before it reached that audience. He disputes the characterisation. It is recorded here because it happened and is part of the sequence, **not** because its contents are accepted.
+
+**What this track adds:** the conduct didn't stay inside House of Macros. Two named participants and the video's author moved the same narrative onto public platforms under handles that don't visibly tie back to their Discord accounts — which is why the handle↔ID mapping above is worth locking down properly.
+---
+
 ### A second server confirms the AI method as routine, not hypothetical
 
 In Sataana's own, separate Discord — the one referenced above as the real "GRIP Discord" — the AI question comes up again, this time as plain fact rather than a proposal. Someone asks about running something "through Claude." Sataana's answer:
@@ -150,5 +183,8 @@ The same server also turned up who's behind the anti-GSE YouTube video shared as
 - The full GitHub URL Sataana linked (pointed at Timothy Luke's commit history) — attempted, not yet captured cleanly.
 - Identity/context for **Tony_Hronik**, **rtx**, and **peytonjo** — newly surfaced names not on the original watch list.
 - Anything in DMs or the separate "GRIP Discord" server referenced by Sataana — outside this account's visibility.
+- Exact UTC for every item in the public-campaign era — currently derived from platform relative ages read on 2026-07-29 (marked ≈).
+- Whether GSE was in fact delisted from CurseForge around 2026-07-16, independently of the (now body-deleted) Reddit post that says so.
+- Whether the 2026-07-29 Bellular video is about GSE specifically, and what exactly it alleges — watch it and record the claims before answering any of them.
 
 See `captures.md` for the full verbatim log, every permalink, and the complete action-item list.
