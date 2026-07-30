@@ -2,7 +2,31 @@
 
 **Purpose:** independent verification of the claims in `JesperLive/gse-companion-disclosure` and the *TheKephas* video ("We Need to Talk About the GSE Addon Community"), checked against the **actual shipped GSE Companion 0.4.22 build**. Reproducible and hash-anchored. These are the receipts behind `RESPONSE-to-companion-disclosure.html` and `RESPONSE-brief-for-Tim.html`.
 
-> **Two honesty caveats, up front.** (1) Two facts require **the GSE author's** authoritative confirmation before any public use: that the access-policy `enforce` flag was **never** set true server-side, and that the diagnostic upload was **never** used to pull a user's files. The client code and the discloser's own captures point that way, but the **server operator is the authority.** (2) This analysis was performed with AI assistance and revised as evidence arrived; treat it as a **strong, reproducible draft** — verify the hashes and the `enforce` captures yourself.
+> **Two honesty caveats, up front.** (1) Two facts could only be confirmed by **the GSE author**, as server operator: that the access-policy `enforce` flag was never set true server-side, and what the diagnostic upload actually pulled. **Both are now answered on the record — see §1a below.** (2) This analysis was performed with AI assistance and revised as evidence arrived; treat it as a **strong, reproducible draft** — verify the hashes and the `enforce` captures yourself.
+
+---
+
+## 1a. The author's statement — the server-side facts, from the only person who has them
+
+**Timothy Luke (GSE author and operator of `api.gse.tools`), 2026-07-29, verbatim:**
+
+> "IT went to a dead end that was never monitored, captured or logged. There was no server enforce to be able to set to \"true\". There was a webpage which had a \"swtich\" on it that loked like it did something but it was unable to be pressed.
+>
+> The diagnostic is something else entirely. It uploaded GSE.lua and the the companion files. thats it. The function has been updated where a user could choose to upload other files at their discretion"
+
+*(Quoted as written, typos included, per this package's no-paraphrase rule for quotations.)*
+
+**Why this matters more than the `enforce: false` captures.** Those captures showed the flag was **false** on three dates. The author's statement is stronger: **there was no server-side `enforce` to set true at all.** The endpoint led to a dead end that was never monitored, captured or logged, and the on-screen "switch" could not even be pressed. So the destructive routine was not "armed and switched off" — **there was never a mechanism capable of arming it.**
+
+**On the diagnostic — capability versus use, kept distinct.** §3 below establishes from the shipped 0.4.22 code what that path *could* reach. The author states what it *did*: it uploaded `GSE.lua` and the Companion's own files, and nothing else. These are not in conflict — a code path can have more reach than the server ever exercised, and **only the operator can speak to what was actually requested**, because that is a server-side fact no amount of client analysis can establish. The two claims should always be presented in that order and never merged.
+
+**Additionally, per the author (2026-07-29):** *all* diagnostic uploads are now tied to a **user-initiated request**.
+
+Record that precisely, because it is a statement about operational behaviour, not something the shipped client enforces. In the **0.4.26** bytes hashed above, the SSE handler for `companion:request` still calls the gather when the message carries a non-empty `kinds` array — i.e. the *client* will still respond to a server-sent request. So the correct statement is: **the operator states the server only issues these in response to a user-initiated report**, and/or the change post-dates 0.4.26. Do **not** claim the client rejects unsolicited requests, because in 0.4.26 it does not. Anyone can check that themselves, so claiming otherwise would be found out.
+
+**Standing caveat, stated plainly.** This is the author's account. For server-side behaviour there is no independent way to verify it — no third party can audit a server they do not run — and this package does not pretend otherwise. What can be checked independently is everything else: the build hashes, the `enforce: false` captures the discloser published himself, and the client code.
+
+---
 
 ---
 
@@ -34,7 +58,7 @@ His hashes are honest and match reality — see `discloser-own-evidence/hashes.t
 - In the **current build (0.4.22)** the hardcoded cleanup is **removed**. `enforce` is fetched and only feeds the status UI (`index.js` ~650, ~3043, ~3058, ~3067–3068 `policy:state`). No `runAccountCleanup` exists.
 - The GRIP-specific targeting shown in the video (base64 `GRIP-EMS.lua` / `GRIP_EMS_CHAR` / `provenanceSource` / `gse-legacy`) is **not present in 0.4.22** — confirmed absent as plaintext, as those base64 literals, and after decoding every base64 literal in the main process. Per the discloser's **own** timeline it lived in **0.4.12–0.4.14** (`evidence/app_asar_grip_region_0.4.14.js`) and was generalized/removed afterward.
 
-**Conclusion:** "could delete" refers to code that was present in earlier builds; "**deleted your data**" **never occurred**, and the discloser's own files prove the trigger was off. It functioned as a dormant canary (the GSE author's stated intent) and is gone from the shipping build.
+**Conclusion:** "could delete" refers to code that was present in earlier builds; "**deleted your data**" **never occurred**. The discloser's own files show the trigger was off, and per the author (§1a) **there was no server-side `enforce` capable of being set true** — the path led to a dead end that was never monitored, captured or logged, and the visible "switch" could not be pressed. It functioned as a dormant canary (the GSE author's stated intent), and it is gone from the shipping build.
 
 ## 2. What the delete targeted, when it existed — narrow
 

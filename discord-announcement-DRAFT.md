@@ -11,18 +11,15 @@
 
 You may have seen a claim that the GSE Companion app spies on you or deletes other addons' data. Here are the facts — and how to check them yourself.
 
-**No one's data was deleted.** The "delete" code shown in the video was gated behind a server switch (`enforce`) that was **off** — the discloser's *own* evidence files show `"enforce": false` on June 20, June 21, **and** July 9. It never ran, and in the current build it has been **removed entirely**. It was a dormant safeguard that was never enabled.
+**No one's data was deleted — there was never a switch to flip.** The author confirms the code in the video pointed at **a dead end that was never monitored, captured or logged**. There was no server-side `enforce` that could be set to true, and the "switch" on the page couldn't even be pressed. The discloser's own captures agree: `"enforce": false` on June 20, June 21 and July 9. It has since been removed entirely.
 
-**The GSE addon is 100% free.** Full class sets are public and free on CurseForge — no addon feature is sold. GSE.Tools takes no money; a creator can *optionally* link their *own* Patreon for their *own* extras, and the sets stay free.
+**The GSE addon is 100% free.** Full class sets are public and free on CurseForge — nothing is sold. A creator may *optionally* link their *own* Patreon for their *own* extras; the sets stay free.
 
-**Nobody was auto-banned for using another addon.** Specific people were removed by admins for organizing to scrape, convert, strip the ownership tag from, and redistribute creators' All-Rights-Reserved sequences.
+**Nobody was auto-banned for using another addon.** Specific people were removed by admins for organising to scrape, convert, strip the ownership tag from, and redistribute creators' All-Rights-Reserved sequences.
 
-**One fair point — and it's already been hardened.** The video pointed at something real: a diagnostic path that could gather WoW-folder files and upload them on a server request. In **0.4.26**:
+**One fair point — already hardened.** The video did point at something real: a diagnostic path. Per the author it only ever uploaded `GSE.lua` and the Companion's own files, and every upload is now tied to a request *you* start. In **0.4.26**: error logs aren't collected at all, credentials are stripped from anything sent, and file requests notify you.
 
-- **Addon error logs aren't collected at all** — the request is discarded before any file is read — and **credentials are stripped** from anything sent.
-- **Reads are limited to GSE's own files**, not other addons' or arbitrary paths, and **file requests now notify you** instead of happening quietly.
-
-**Still to come:** signing each request individually — not done yet, and we'd rather say so.
+**Still to come:** signing each request individually — not done yet, and we'd rather say so than have you find out.
 
 **Verify it yourself** (same bytes we all have):
 ```

@@ -70,6 +70,12 @@
 
   <h2><span class="n">03</span>&ldquo;GSE deletes your data&rdquo; &nbsp; <span class="verdict v-false">Did not happen</span></h2>
   <p>This is the headline of the video, and it is the claim with the <em>least</em> support &mdash; from the discloser&rsquo;s own evidence.</p>
+  <div class="box">
+    <div class="lbl">The author, on the record &mdash; 2026-07-29</div>
+    <p style="margin:.2rem 0">&ldquo;IT went to a dead end that was never monitored, captured or logged. There was no server enforce to be able to set to &lsquo;true&rsquo;. There was a webpage which had a &lsquo;switch&rsquo; on it that looked like it did something but it was unable to be pressed.&rdquo;</p>
+    <p style="margin:.2rem 0">This is stronger than the captures below. Those show the flag reading <strong>false</strong> on three dates. The author &mdash; who operates the server, and is therefore the only person who can speak to this &mdash; states there was <strong>no mechanism capable of arming it at all</strong>. The routine was not switched off; it was never wired to anything.</p>
+  </div>
+
   <p>The cleanup routine only ran under one condition: <code>restricted &amp;&amp; enforce</code>. The <code>enforce</code> value comes from the server (<code>GET /settings/access-policy</code>). The discloser captured that endpoint on <strong>three separate dates</strong> and committed the results to his repo:</p>
   <div class="box key">
     <div class="lbl">From the discloser&rsquo;s own repo (<span class="mono">evidence/live_access_policy_*.json</span>)</div>
@@ -110,6 +116,12 @@
     <div class="lbl">Still outstanding &mdash; stated plainly</div>
     <p style="margin:.2rem 0">Each individual request is <strong>not yet cryptographically signed</strong>. It requires an authenticated session and a freshly‑issued token, but not the per‑request <code>ed25519</code> signature the destructive path already uses. That hardening is still to come. We would rather publish that here than have someone else point it out.</p>
   </div>
+  <div class="box">
+    <div class="lbl">What the diagnostic actually uploaded &mdash; the author, 2026-07-29</div>
+    <p style="margin:.2rem 0">&ldquo;The diagnostic is something else entirely. It uploaded GSE.lua and the the companion files. thats it. The function has been updated where a user could choose to upload other files at their discretion&rdquo; &mdash; and, separately: <strong>all diagnostic uploads are now tied to a user-initiated request.</strong></p>
+    <p style="margin:.2rem 0">Two different questions, and we keep them apart on purpose. <strong>What the code could reach</strong> is in the shipped app and anyone may audit it. <strong>What the server actually asked for</strong> is a server-side fact only its operator can attest to. We give you both, in that order, and we do not dress the second up as the first.</p>
+  </div>
+
   <div class="box">
     <div class="lbl">Before someone &ldquo;catches&rdquo; us on this &mdash; we&rsquo;ll say it first</div>
     <p style="margin:.2rem 0">The error&#8209;log reading code is <strong>still present in the file</strong>. Anyone running a strings scan over the app will find the pattern <code>/^!?Bug(Grabber|Sack)\.lua$/i</code> and can claim nothing changed. Here is the honest distinction: <strong>being present is not being reachable.</strong> The request handler now discards the <code>errorlogs</code> request <em>before</em> any file is gathered, so that code cannot be triggered by a server request. You can confirm it yourself &mdash; find <code>.delete(&quot;errorlogs&quot;)</code> in <code>out/main/index.js</code>. We would rather point at it than have it presented as a discovery.</p>
