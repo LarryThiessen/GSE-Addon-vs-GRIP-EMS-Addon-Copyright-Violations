@@ -72,7 +72,7 @@ Reported infringing project (primary): GRIP – Enhanced Macro Sequencer ("GRIP-
 - URL: https://www.curseforge.com/wow/addons/grip-enhanced-macro-sequencer
 - Author (CurseForge): sirsataana ("the GRIP addon family by Sataana")
 
-GRIP-EMS reproduces GSE's signature design and behavior, is built to read GSE's internal data format, engineers a workaround around GSE's anti-scraping lock, and strips GSE's owner-identity (PlatformID + gse.tools link + Ed25519 Checksum) from imported/exported content. Its store page markets the GSE import directly — "got an old dusty GSE string laying around? Chances are, you can use that as well!" Present in every release, from v1.0.4 (2026-03-21) through the current v2.3.7 (2026-07-12). File/line detail in the Infringing Content field and the attached exhibit.
+GRIP-EMS reproduces GSE's signature design and behavior, is built to read GSE's internal data format, engineers a workaround around GSE's anti-scraping lock, and strips GSE's owner-identity (PlatformID + gse.tools link + Ed25519 Checksum) from imported/exported content. Its store page markets the GSE import directly — "got an old dusty GSE string laying around? Chances are, you can use that as well!" Present in every release, from v1.0.4 (2026-03-21) through the current **v2.3.16** (verified 2026-07-29; SHA-256 `5c1499cf695b1c82…`) — including zero `PlatformID` occurrences across all 198 Lua files of that current build. File/line detail in the Infringing Content field and the attached exhibit.
 
 Associated work by the same author (same conduct, in the browser): the companion website LazyGrip.net, whose public "Workshop" tools reproduce a submitted GSE sequence in full plaintext and strip the GSE.Tools owner identity on convert.
 - https://lazygrip.net (Workshop tools: /workshop/decode and /workshop/convert)
@@ -96,8 +96,9 @@ Under CurseForge's IP/moderation policy, I ask that GRIP-EMS be required to, at 
 
 ---
 
-## ⚠ CONFIRM before submitting
-1. **Your CurseForge username** and **full legal name / email** (the three personal fields).
-2. **GRIP's current version** — I verified v2.3.7 (2026-07-12) live; check it hasn't bumped again.
-3. **Exhibit line numbers** — the `~####` file:line refs match the exhibits you attach.
-4. **Real-name decision** — these fields deliberately use only the CurseForge handle `sirsataana` (no unconfirmed real name). The attached narrative docs still carry a "Sataana ≈ Jesper Driessen — *confirm*" note; decide whether you want that in the upload or a scrubbed zip.
+## ✅ Pre-submission checks — all cleared 2026-07-29
+
+1. **Personal fields** — *resolved; nothing outstanding on the package.* The three bracketed fields are entered on the form at submission time by whoever submits it. The legal name is already on record in GSE's own `LICENSE` ("Copyright (c) 2026 Timothy Minahan"); the CurseForge username and contact email are simply typed into the form.
+2. **GRIP's current version** — *resolved.* **v2.3.16**, verified 2026-07-29 from the shipped release package (SHA-256 `5c1499cf695b1c82710177566b9ae5eab7c8ccd2edb802378d21d0feff39464e`). `PlatformID`, `HelpURL` and `gse.tools` all return **zero** across its 198 Lua files, and it still reads `GSESequences` / `GSE.Library`. The complaint is about the release currently being distributed.
+3. **Exhibit line numbers** — *resolved.* Verified against both v2.3.5 and v2.3.16. `Engine/StepFunctions.lua:248-262` and `Import/LegacyMigrate.lua:92-99` are identical in both. `Import/LegacyImport.lua` grew, so its GSE-legacy blanking moved from `857-872` to `921-927` — cite the v2.3.16 numbers if you quote the current build. Details in `exhibits/grip-vs-gse-forensic-comparison.md`, Appendix A.
+4. **Real-name decision** — *resolved.* Operator identity is established (`evidence/OPERATOR-IDENTITY-RESOLVED.md`); no scrubbed zip is needed. These form fields still deliberately use only the CurseForge handle `sirsataana`, because that is the identifier CurseForge acts on — the legal name adds nothing to a platform report.
