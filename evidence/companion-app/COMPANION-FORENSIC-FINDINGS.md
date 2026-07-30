@@ -8,7 +8,7 @@
 
 ## 1a. The author's statement — the server-side facts, from the only person who has them
 
-**Timothy Luke (GSE author and operator of `api.gse.tools`), 2026-07-29, verbatim:**
+**Timothy Luke (GSE author and operator of `api.gse.tools`), Discord, 2026-07-29 10:30 PM, verbatim.** Source capture: [`claim-screenshots/11_tim-operator-statement.png`](claim-screenshots/11_tim-operator-statement.png) (2039×265, SHA-256 `87c4e8590b5406feee512ed188bc393bf0c2396ad1bbe105443540c0a0683a2a`, no metadata chunks). The transcription below was checked character-by-character against that image, typos and spacing included:
 
 > IT went to a dead end that was never monitored, captured or logged.  The dead end wasnt even owned by me.  I have a total of zero data about anyone using grip.  There was no server enforce to be able to set to"true".  There was a webpage which had a "swtich" on it that loked like it did something but it was unable to be pressed.
 >

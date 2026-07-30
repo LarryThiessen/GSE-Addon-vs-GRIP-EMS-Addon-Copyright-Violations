@@ -15,6 +15,8 @@ The actual slides/screenshots from Sataana's `gse-companion-disclosure` and the 
 | 09 | `09_claim_code_delete-gse-legacy-from-grip.png` | The delete loop: removes only sequences tagged `gse-legacy` / matching GSE names from GRIP's file, then rewrites it. | Targets **only GSE's own scraped content** — and never executed (see 08). → §2 |
 | 10 | `10_claim_code_signed-directive-engine.png` | The current (0.4.22) **signed** engine: verify → run only if signed & WoW closed → ops `read/deleteKeys/setKey/write`. | Real current capability, but **signature-gated**. The *unsigned* diagnostic upload is the one item to fix. → §3 |
 
+| 11 | `11_tim-operator-statement.png` | **The operator statement (2026-07-29).** GSE's author answering the two questions only he could: there was no server-side `enforce` capable of being set true, the endpoint was a dead end *"wasnt even owned by me"*, he holds *"a total of zero data about anyone using grip"*, and the diagnostic uploaded `GSE.lua` plus the Companion's own files only — now all user-initiated. | Source capture for `../COMPANION-FORENSIC-FINDINGS.md` §1a |
+
 ---
 
 **The single most important pairing:** slide **08** shows the delete only fires when `enforce` is true. The discloser's **own** captures — [`../discloser-own-evidence/live_access_policy_2026-06-20.json` / `-06-21.json` / `-07-09.json`](../discloser-own-evidence/) — all read **`"enforce": false`**. Claim (08 + 09) **+** his own proof (`enforce` off, three dates) **= it never ran.** That is the whole rebuttal in one line.
