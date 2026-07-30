@@ -18,6 +18,20 @@
 
 *(Quoted as written — typos, spacing and the client's "(edited)" marker included, per this package's no-paraphrase rule. The same statement is recorded in the `GRIP-IP-Complaint` package as `evidence/companion-app/OPERATOR-STATEMENT-2026-07-29.md`.)*
 
+**Message identifiers (snowflake-decoded, authoritative).** The statement was sent as two messages in a Discord DM:
+
+| Message ID | Decoded UTC | Content |
+|---|---|---|
+| `1532228792528015480` | **2026-07-30 03:30:11.573 UTC** | the main statement (shown `(edited)`) |
+| `1532229212893741196` | **2026-07-30 03:31:51.796 UTC** | the closing line, 100 seconds later — *"All the diag uploads have been tied to a user initiated request."* |
+
+Permalinks: [message 1](https://discord.com/channels/@me/788975881678618644/1532228792528015480) · [message 2](https://discord.com/channels/@me/788975881678618644/1532229212893741196)
+
+Two notes on those, both deliberate:
+
+- **The UTC date is 2026-07-30, not 07-29.** The capture shows `10:30 PM` in the author's local time, which decodes to 03:30 UTC the following day — consistent with UTC−5. This package treats snowflake-decoded UTC as authoritative for every other quote, so it does here too. The "2026-07-29" used in filenames and headings is the **local** date of the conversation; where the exact instant matters, cite the UTC above.
+- **These are DM permalinks** (`/channels/@me/…`), so they resolve only for the two participants — a third party clicking them sees nothing. That is why the citable artifact is the hash-anchored capture, with the permalinks as corroboration for the parties rather than as public verification.
+
 **Two further points in that statement, easy to miss and both material:**
 
 | | |
