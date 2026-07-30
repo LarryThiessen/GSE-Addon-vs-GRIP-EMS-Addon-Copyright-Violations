@@ -11,6 +11,10 @@
 > | 3. Scope it down | **Largely done.** `Ho()` runs `n.delete("errorlogs")` before gathering, making the BugGrabber/BugSack reader `Co()` unreachable from a server request; `settings` is sent with `accessToken`/`userSession` deleted; the always-on portion is a GSE-only mandatory gather (`Po()`). |
 >
 > **Do not describe this path publicly as removed.** The capability the video showcased is gated off and the arbitrary-read concern is materially reduced, but the endpoint exists and item 1 is still open.
+>
+> **Anchor:** clean installer `GSE Companion Setup 0.4.26.exe` SHA-256 `c720ec821818fa2b58a4e50d71dbbd0c06c81c01ec573b5e2a4505554d0780d7` → `resources/app.asar` SHA-256 `c5e569a768acf03bfbe7fe8aa9a9d6a9c4a52f534fa913cc374f90534a57ac21` (6,210,073 bytes). The three statuses above were read from those shipped bytes.
+>
+> **Also true, and worth saying first:** the error-log reader is still *present* in the binary — only unreachable, because the `errorlogs` kind is dropped before any gather runs. A strings scan will find it. Describe it as unreachable, never as deleted.
 
 **Why it is kept:** the discloser's public claims are about 0.4.22, so answering them requires an accurate record of what 0.4.22 contained — including the one item that was a fair criticism of that build. Deleting the record would look like concealment; dating it is stronger.
 

@@ -47,6 +47,10 @@ Per the disclosed 0.4.14 code, it flagged only sequences tagged **`provenanceSou
 - **⚠ UNSIGNED diagnostic upload — the real residual.** SSE `companion:request` (~1704) → `zo()` (~1455) gathers files **by kind** (incl. **BugGrabber/BugSack** via the `Ao` regex `/^!?Bug(Grabber|Sack)\.lua$/i`, ~911/997) **and** reads **server-specified paths** under `AddOns`/`WTF`, then POSTs their contents to `/diagnostic/upload` (~1479). This path is **not** ed25519-signed and **not** `enforce`-gated **in 0.4.22**. **No evidence of use** found in the captures.
 
   > **Status in 0.4.26 — scoped down, not removed (verified 2026-07-29).** Checked against the shipped `app.asar.original` (SHA-256 `c5e569a768acf03bfbe7fe8aa9a9d6a9c4a52f534fa913cc374f90534a57ac21`, version 0.4.26) and the current source. The endpoint still exists, but: `Ho()` executes `n.delete("errorlogs")` **before** gathering, so the BugGrabber/BugSack reader `Co()` is **unreachable from a server request**; `settings` is sent with `accessToken` and `userSession` deleted; the always-on portion is a **GSE-only mandatory gather** (`Po()`); it requires an authenticated session plus a freshly-refreshed bearer token; and a `requestFiles` flag now raises a user-visible desktop notification. **Still outstanding:** the per-request ed25519 signature recommended in `COMPANION-APP-FIX.md`. So the specific capability the disclosure showcased is gated off, and the arbitrary-path concern is materially reduced — but the path is not gone, and this document should not claim it is.
+  >
+  > **Hash-anchored (2026-07-29).** Extracted from a clean installer, not from a working tree: `GSE Companion Setup 0.4.26.exe` SHA-256 `c720ec821818fa2b58a4e50d71dbbd0c06c81c01ec573b5e2a4505554d0780d7` → `resources/app.asar` SHA-256 `c5e569a768acf03bfbe7fe8aa9a9d6a9c4a52f534fa913cc374f90534a57ac21` (6,210,073 bytes), `package.json` version `0.4.26`, `out/main/index.js` 136,744 bytes. Confirmed present in those shipped bytes: `.delete("errorlogs")`, `delete s.accessToken`, and the `/diagnostic/upload` endpoint.
+  >
+  > **Reachability vs presence — state this before anyone else does.** The error-log reader is **still in the binary**; a strings scan finds `/^!?Bug(Grabber|Sack)\.lua$/i` and `has("errorlogs")`. It is **unreachable from a server request** because the handler force-drops the `errorlogs` kind before gathering. Do not claim the code was deleted — claim, accurately, that it cannot be triggered, and point at `.delete("errorlogs")`.
 - **User bug report.** `As()` (~2949) via `report:submit` (~2982) — user-initiated, honors `includeModList`.
 
 ## 4. GSE addon self-protection — legitimate, corroborated
@@ -73,3 +77,10 @@ certutil -hashfile "%LOCALAPPDATA%\Programs\gse-companion\resources\app.asar" SH
 sha256sum "$LOCALAPPDATA/Programs/gse-companion/resources/app.asar"                     (bash)
 ```
 → compare to `discloser-own-evidence/hashes.txt`. Then open the three `live_access_policy_*.json` and read the `enforce` value.
+
+For the **0.4.26** claims, hash the installer and the asar inside it (no 7-Zip needed — Windows' bundled `tar` reads the payload):
+
+```
+certutil -hashfile "GSE Companion Setup 0.4.26.exe" SHA256
+```
+→ expect `c720ec821818fa2b58a4e50d71dbbd0c06c81c01ec573b5e2a4505554d0780d7`. The `resources/app.asar` extracted from it must hash to `c5e569a768acf03bfbe7fe8aa9a9d6a9c4a52f534fa913cc374f90534a57ac21` and be 6,210,073 bytes. Then search `out/main/index.js` for `.delete("errorlogs")` (the gate) and `/diagnostic/upload` (the endpoint that still exists).

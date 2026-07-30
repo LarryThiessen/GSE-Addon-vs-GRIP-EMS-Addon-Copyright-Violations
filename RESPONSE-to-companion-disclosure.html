@@ -110,7 +110,11 @@
     <div class="lbl">Still outstanding &mdash; stated plainly</div>
     <p style="margin:.2rem 0">Each individual request is <strong>not yet cryptographically signed</strong>. It requires an authenticated session and a freshly‑issued token, but not the per‑request <code>ed25519</code> signature the destructive path already uses. That hardening is still to come. We would rather publish that here than have someone else point it out.</p>
   </div>
-  <p style="font-size:.92em;opacity:.85">Everything in this section is checkable in the shipped application, not a promise about intentions. Version <strong>0.4.26</strong> and later; build hash <code>[to be filled from a clean install]</code>.</p>
+  <div class="box">
+    <div class="lbl">Before someone &ldquo;catches&rdquo; us on this &mdash; we&rsquo;ll say it first</div>
+    <p style="margin:.2rem 0">The error&#8209;log reading code is <strong>still present in the file</strong>. Anyone running a strings scan over the app will find the pattern <code>/^!?Bug(Grabber|Sack)\.lua$/i</code> and can claim nothing changed. Here is the honest distinction: <strong>being present is not being reachable.</strong> The request handler now discards the <code>errorlogs</code> request <em>before</em> any file is gathered, so that code cannot be triggered by a server request. You can confirm it yourself &mdash; find <code>.delete(&quot;errorlogs&quot;)</code> in <code>out/main/index.js</code>. We would rather point at it than have it presented as a discovery.</p>
+  </div>
+  <p style="font-size:.92em;opacity:.85">Everything in this section is checkable in the shipped application, not a promise about intentions. Verified against <strong>0.4.26</strong>: installer <code>GSE Companion Setup 0.4.26.exe</code> SHA&#8209;256 <code>c720ec821818fa2b58a4e50d71dbbd0c06c81c01ec573b5e2a4505554d0780d7</code>; the <code>resources/app.asar</code> inside it SHA&#8209;256 <code>c5e569a768acf03bfbe7fe8aa9a9d6a9c4a52f534fa913cc374f90534a57ac21</code> (6,210,073 bytes). Hash your own copy and compare.</p>
 
   <div class="opt">
     <div class="lbl">Optional &mdash; Tim &amp; Larry&rsquo;s call (consider legal review before publishing)</div>
