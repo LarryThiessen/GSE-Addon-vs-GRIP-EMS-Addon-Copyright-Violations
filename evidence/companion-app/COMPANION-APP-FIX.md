@@ -1,6 +1,18 @@
-# GSE Companion — the one thing to fix (for Timothy Luke)
+# GSE Companion — the one residual item in 0.4.22, and where it stands in 0.4.26
 
-**Purpose:** the companion-app analysis found the "spies on you / deletes your data" claims to be refuted or misframed — **except one item that is a fair, legitimate criticism.** Fixing it removes the last shred of truth the critics can point to and turns their strongest point into a shipped improvement. This is a **developer to-do for you**, not a legal document.
+> ## Status in 0.4.26: scoped down, **not** removed — verified 2026-07-29
+>
+> The body of this document analyses **0.4.22**, the build the discloser captured. Re-checked against **0.4.26** (shipped `app.asar.original`, SHA-256 `c5e569a768acf03bfbe7fe8aa9a9d6a9c4a52f534fa913cc374f90534a57ac21`) and the current source:
+>
+> | Recommendation below | Status in 0.4.26 |
+> |---|---|
+> | 1. Sign every request (ed25519) | **Not done.** Gated on an authenticated session + freshly-refreshed bearer token instead of a per-request signature. |
+> | 2. Make it opt-in | **Partly.** A `requestFiles` flag now raises a user-visible desktop notification; the `kinds` gather still runs on a server request. |
+> | 3. Scope it down | **Largely done.** `Ho()` runs `n.delete("errorlogs")` before gathering, making the BugGrabber/BugSack reader `Co()` unreachable from a server request; `settings` is sent with `accessToken`/`userSession` deleted; the always-on portion is a GSE-only mandatory gather (`Po()`). |
+>
+> **Do not describe this path publicly as removed.** The capability the video showcased is gated off and the arbitrary-read concern is materially reduced, but the endpoint exists and item 1 is still open.
+
+**Why it is kept:** the discloser's public claims are about 0.4.22, so answering them requires an accurate record of what 0.4.22 contained — including the one item that was a fair criticism of that build. Deleting the record would look like concealment; dating it is stronger.
 
 > Analyzed against the shipped **GSE Companion 0.4.22** build (`app.asar` → `out/main/index.js`, 137,312 bytes; SHA-256 `27716e71…4cd6e1`, which matches the discloser's own `hashes.txt`). Line numbers below are into that built `index.js` — map them to your source. **Confirm each against your real source before shipping.** See `COMPANION-FORENSIC-FINDINGS.md` §3 for the full context.
 
@@ -8,11 +20,11 @@
 
 ## TL;DR
 
-There is **one unsigned code path** that can gather files from the WoW folder and upload them, and it is **not** protected by the same ed25519 signature gate your destructive/directive path already uses. **No evidence it was ever misused** — but it *should* be signed, opt-in, and scope-limited. Do that and the "it can read/upload your files without asking" argument is gone.
+In **0.4.22** there was **one unsigned code path** that could gather files from the WoW folder and upload them, not protected by the same ed25519 signature gate the destructive/directive path already used. **No evidence it was ever misused.** In 0.4.26 it is **substantially scoped down but not removed** — see the status box above. The analysis below is the dated record of 0.4.22, the build the disclosure is actually about.
 
 ---
 
-## The issue — the unsigned diagnostic upload
+## The issue as it stood in 0.4.22 — the unsigned diagnostic upload
 
 - An SSE message `companion:request` (`index.js` ~1704) triggers `zo()` (~1455), which:
   - gathers files **by kind** — including **BugGrabber/BugSack** error logs via the `Ao` regex `/^!?Bug(Grabber|Sack)\.lua$/i` (~911 / ~997), **and**
@@ -21,7 +33,7 @@ There is **one unsigned code path** that can gather files from the WoW folder an
 - **This path is not ed25519-signed and not `enforce`-gated.** Compare: your *directive* engine (`qo()` verify ~1055 → `Jo()`/`Po()` run ~1514) only runs a plan if it is **signed, unexpired, persona-matched, and WoW is closed**. The diagnostic upload has none of those guards.
 - Practical reach: it can read the server-named files under AddOns/WTF and the BugGrabber/BugSack logs, and send them up — on an unsigned server request.
 
-**Why this is the fair point:** everything else the critics raised was refuted (the delete never armed — `enforce:false` on all three of their own captures — and is removed) or misframed (the "paywall," the "bans"). This one is real: a path that *can* pull a user's files without a signature or an explicit opt-in. Own it and fix it.
+**Why this is the fair point:** everything else the critics raised was refuted (the delete never armed — `enforce:false` on all three of their own captures — and is removed) or misframed (the "paywall," the "bans"). This one is real: a path that *can* pull a user's files without a signature or an explicit opt-in. **In 0.4.22, as analysed here.** For what has and has not changed since, see the status box at the top — two of the three recommendations below are now largely or partly met.
 
 ---
 

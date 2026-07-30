@@ -23,11 +23,11 @@ Rebuts the public claim that the GSE Companion app spies on / deletes users' dat
 | `RESPONSE-to-companion-disclosure.html` | Full public/community rebuttal. |
 | `discord-announcement-DRAFT.md` | Ready-to-post Discord message (3 lengths). |
 | `evidence/companion-app/COMPANION-FORENSIC-FINDINGS.md` | The receipts — hash-anchored, line-cited. |
-| `evidence/companion-app/COMPANION-APP-FIX.md` | **The one thing to actually fix on the app** — the unsigned diagnostic upload: sign it, make it opt-in, scope it. A dev to-do for Tim. |
+| `evidence/companion-app/COMPANION-APP-FIX.md` | The one residual item found in **0.4.22** — an unsigned diagnostic upload — and its **status in 0.4.26**: scoped down (error-log gathering gated off, secrets stripped, GSE-only mandatory gather), but not removed, and still without the recommended per-request signature. Verified 2026-07-29. |
 | `evidence/companion-app/claim-screenshots/` | **The video's actual slides** (full-res PNG) with a reading-order `INDEX.md` mapping each claim to our answer. Start with its `INDEX.md`. |
 | `evidence/companion-app/discloser-own-evidence/` | The discloser's **own** files that prove our point: `hashes.txt` + `live_access_policy_*.json` (all show `enforce: false`). |
 
-**⚠ Before publishing Part A:** you must personally confirm (1) `enforce` was **never** set true server-side, and (2) the diagnostic-upload path was **never** used to pull a user's files. The code and his own captures point that way, but you're the authority and he has the source. (Details in the findings doc.)
+**⚠ Before publishing Part A:** you must personally confirm (1) `enforce` was **never** set true server-side, and (2) the diagnostic-upload path was **never** used to pull a user's files. The code and his own captures point that way, but you're the authority and he has the source. (Details in the findings doc.) **Note on the diagnostic path:** it was re-checked in **0.4.26** on 2026-07-29 and is **scoped down but still present** — see the status box in `COMPANION-APP-FIX.md`. Do not describe it publicly as removed.
 
 ### Part B — The IP case: GRIP / LazyGrip clone & scrape GSE *(offensive)*
 Everything from "The core findings" down. **Best entry point: [`START HERE.html`](<START HERE.html>)** — a self-contained page (open in any browser) that walks the whole chain of events in order, with every Discord message and both LazyGrip exhibits embedded. Deeper: `evidence/discord/THE-STORY.md` (plain-English narrative), `evidence/discord/captures.md` (verbatim log + permalinks), and `exhibits/` (line-cited code).
