@@ -3,8 +3,8 @@
 **Prepared by:** Larry Thiessen (ScaryLarryGames / "SLG") — author of the SLG-Sequences GSE sequence sets
 **Subject addon:** GRIP – Enhanced Macro Sequencer ("GRIP-EMS"), by *Sataana* (MrSataana / JesperLive), CurseForge project ID 1489414
 **Related addon:** GSE – Sequences, Variables, Macros (GnomeSequencer-Enhanced), by TimothyLuke
-**Versions examined:** GRIP-EMS **v2.3.5** (built 2026-07-03, current release — the operative version for this complaint), with v1.0.4 (2026-03-21) and v1.9.1 (2026-04-12) examined to show the behaviour is long-standing; all downloaded from CurseForge. GSE addon source: public (GitHub `TimothyLuke/GSE-Advanced-Macro-Compiler`).
-**Date:** 2026-07-08
+**Versions examined:** GRIP-EMS **v2.3.16** (2026-07-29, **the current release and the operative version for this complaint**, CurseForge file ID 8537834), with **v2.3.5** (2026-07-03), **v1.9.1** (2026-04-12) and **v1.0.4** (2026-03-21) examined to show the behaviour is long-standing and unchanged; all downloaded from CurseForge. GSE addon source: public (GitHub `TimothyLuke/GSE-Advanced-Macro-Compiler`).
+**Date:** 2026-07-08. **Revised 2026-08-01** — re-verified against the current release v2.3.16, and the distribution statement in §2 corrected (see the note there).
 
 > **Nature of this document.** This is a factual, source-cited technical record. Every claim below is a line you can read in the shipped, un-obfuscated Lua of the public CurseForge downloads — no decompilation. I am a GSE sequence author, an interested party; do not take my characterization on faith — the reproduction steps at the end let any reviewer confirm each line independently. Legal-characterization sections are my good-faith basis for complaint, not a legal opinion; I am not a lawyer.
 
@@ -12,7 +12,7 @@
 
 ## 1. Summary of the claim
 
-I and other creators have authored GSE macro sequences for years — a large share distributed **privately**, only to supporters/subscribers, and licensed for **personal use with no redistribution**. The GSE ecosystem binds each unique sequence to an author-owned identity (a `PlatformID` that resolves to the author's GSE.Tools account record).
+I and other creators have authored GSE macro sequences for years. **Every one of my own sequences is flagged Private on GSE.Tools — 100%, without exception —** and all are licensed for **personal use with no redistribution** (§2). The GSE ecosystem binds each unique sequence to an author-owned identity (a `PlatformID` that resolves to the author's GSE.Tools account record).
 
 GRIP-EMS contains a migration subsystem that, on the end-user's machine:
 
@@ -28,7 +28,7 @@ The net effect is that licensed, author-locked, often private creative work is c
 ## 2. The works and their license
 
 - **Works:** original GSE macro sequences authored by me under the "SLG-Sequences" name (macro step logic, ordering, variables, metadata).
-- **Distribution:** ~80% distributed **privately** to supporters/subscribers, not published openly.
+- **Distribution / permissions:** **100% of the rights holder's sequences are flagged Private on GSE.Tools, without exception** — this applies to every supporter and every downloader. A Private sequence may sit in a Public Collection (others may **import** it) and another user may **store** it in their own library, but the **Export and Install controls are withheld** from them unless the rights holder **approves a fork request**. The `PlatformID` is the token by which the platform identifies the work and enforces that. *(Corrected 2026-08-01: an earlier version read "~80% distributed privately to supporters/subscribers," which described distribution reach and was misleading as to permissions — the Private flag is universal, not partial.)*
 - **License:** custom personal-use license — **no redistribution, no commercial use** (full text at Appendix B).
 - **Public notice:** every one of my sequence projects on CurseForge is published with its **Project License set to "All Rights Reserved,"** whose "View full license" is the SLG-Sequences license (Appendix B). The no-redistribution terms are therefore publicly posted on each project page — constructive notice to anyone building an import/conversion tool against them.
   - *Note on the separate CurseForge "Project distribution → Allow distribution to 3rd party" toggle:* that setting governs whether third-party **download clients/launchers** (e.g. app managers) may serve the addon **zip**; it is not a copyright license and does not authorize any party to extract, convert, re-encode, or redistribute the **sequence content** contrary to the All-Rights-Reserved license above.
@@ -64,7 +64,7 @@ That is: each unique sequence has a persistent identity that ties it to its orig
 
 **Why the identifier exists (and when):** GSE introduced `PlatformID` on **2026-04-25** as part of its **GSE.Tools Companion / cloud-sync system** (issue #1893). Its purpose is to give every sequence a single stable server-record identity so that a creator's sequences sync to, and remain owned by, that creator's GSE.Tools account — and so a copy never collides with the original. It is, by design, the field that binds a sequence to its author of record.
 
-**Timeline (so the version citations are unambiguous):** `PlatformID` did not exist in GSE before 2026-04-25. Accordingly, the operative conduct here is by **current GRIP (v2.3.5, 2026-07-03)** operating on **current GSE** sequences that now carry a `PlatformID`. GRIP's import/export handling has been byte-for-byte the same behaviour since v1.0.4, but only from GSE's 2026-04-25 build onward is there a `PlatformID` present for GRIP to omit. All "drops PlatformID" citations below are to GRIP **v2.3.5**.
+**Timeline (so the version citations are unambiguous):** `PlatformID` did not exist in GSE before 2026-04-25. Accordingly, the operative conduct here is by **current GRIP (v2.3.16, 2026-07-29)** operating on **current GSE** sequences that now carry a `PlatformID`. GRIP's import/export handling has been byte-for-byte the same behaviour since v1.0.4, but only from GSE's 2026-04-25 build onward is there a `PlatformID` present for GRIP to omit. The line-numbered citations below are to **v2.3.5**, which was the current release when they were taken; **every one of them was re-checked against v2.3.16 on 2026-07-29 and the behaviour is unchanged**.
 
 **Plain English:** `PlatformID` is copyright-management-type information — a unique identifier tying each sequence to its author's account/ownership record.
 
@@ -107,7 +107,7 @@ seqData.importMeta.sourceVersion = tostring(sequence.MetaData.GSEVersion)
 
 ## 6. Finding 4 — GRIP discards the author-owned `PlatformID`
 
-On import, GRIP copies **exactly six** named fields from each GSE sequence into its own record. `PlatformID` is **not** among them, and `PlatformID` appears **nowhere** in GRIP's Lua (verified by full-tree search of v1.0.4, v1.9.1, and current v2.3.5: zero references).
+On import, GRIP copies **exactly six** named fields from each GSE sequence into its own record. `PlatformID` is **not** among them, and `PlatformID` appears **nowhere** in GRIP's Lua (verified by full-tree search of v1.0.4, v1.9.1, v2.3.5 and the current **v2.3.16**: zero references in all four). The same search of v2.3.16 returns **zero references to `HelpURL`** — the GSE.Tools owner-listing link — and zero to GRIP's own `platformId`, `helpUrl` and `gseVersion` field names. GSE's `Checksum` is copied into an `importMeta.sourceChecksum` note (`LegacyImport.lua:738-739`) and never validated against anything.
 
 **GRIP `Import/LegacyMigrate.lua` (v2.3.5) L170–175** (identical mapping also at L239–244 in the disk-fallback path, and unchanged since v1.0.4):
 ```lua
@@ -156,7 +156,7 @@ GSE introduced `PlatformID` on **2026-04-25** (§3). The first GRIP release afte
 | Phase | GRIP releases | GSE has PlatformID? | Effect of GRIP's constant omission |
 |---|---|---|---|
 | Pre-ID | v1.0.4 → v1.9.10 (2026-03-21 → 04-23) | no | latent — no identifier exists to drop |
-| **Post-ID** | **v2.0.0 → v2.3.5 (2026-05-02 → 07-03)** | **yes** | **active removal of a present author identifier** |
+| **Post-ID** | **v2.0.0 → v2.3.16 (2026-05-02 → 07-29)** | **yes** | **active removal of a present author identifier** |
 
 The omission is therefore **structural and constant** — not a regression or a change slipped into one build. Every GRIP version handles the field identically; GSE's addition of `PlatformID` on 2026-04-25 is what turns a constant omission into ongoing removal of a now-present CMI identifier. Full per-version record (version, date, whether GSE carried a PlatformID at that time, GRIP's handling): **Appendix D / `grip_version_scan.csv`**.
 
@@ -226,7 +226,8 @@ Aimed at the addon and its distribution (CurseForge / the GRIP author):
 
 ## Appendix A — files examined (fill in SHA-256 at filing)
 
-- `GRIP-EMS-v2.3.5.zip` (2026-07-03, **operative version**) — SHA-256: `b50ca92e643024fdef84477b325ba0cfaa1056967a077183634d1a8218bd8d2a`
+- `GRIP-EMS-v2.3.16.zip` (2026-07-29, **operative version**, CurseForge file ID 8537834) — SHA-256: `5c1499cf695b1c82710177566b9ae5eab7c8ccd2edb802378d21d0feff39464e`
+- `GRIP-EMS-v2.3.5.zip` (2026-07-03) — SHA-256: `b50ca92e643024fdef84477b325ba0cfaa1056967a077183634d1a8218bd8d2a`
 - `GRIP-EMS-v1.9.1.zip` (2026-04-12) — SHA-256: `4fa4269a89c46c61fbd3f06bfccee21a1b6ca3df1e3f5a1604114ea153cb7602`
 - `GRIP-EMS-v1.0.4.zip` (2026-03-21) — SHA-256: `c3f9677d27fe89c79cbd94a93abaaade47f6291a133afd94932a86285a584cbe`
 - GSE addon source — public GitHub `TimothyLuke/GSE-Advanced-Macro-Compiler`; `PlatformID` introduced 2026-04-25 (issue #1893, GSE Tools Companion sync). Cite the commit/tag current at filing.
@@ -271,7 +272,7 @@ Copyright (c) 2026 Larry A. Thiessen ("ScaryLarryGames"). All Rights Reserved.
 - **2(a)** — no redistribution/re-upload of the Work or any part → GRIP's export + P2P sharing of imported sequences.
 - **2(b)** — no distribution of modified/derivative versions → GRIP re-encodes the sequence into its own `!GRIP1!` format and shares it.
 - **2(d)** — no removal/alteration of author or attribution notices → GRIP drops the `PlatformID` author-identifier (the §1202 CMI point).
-- **3** — subscriber/paid content remains the author's and may not be shared → the ~80% privately-distributed sequences.
+- **3** — subscriber/paid content remains the author's and may not be shared → **all** of the rights holder's sequences, every one flagged Private on GSE.Tools.
 
 ## Appendix C — (optional) captured proof artifact
 
@@ -279,4 +280,4 @@ A `!GRIP1!` export string of one sequence **I authored**, showing my content pre
 
 ## Appendix D — version-by-version scan (machine-readable)
 
-`grip_version_scan.csv` — every GRIP-EMS release v1.0.4 → v2.3.5 (64 files) downloaded from CurseForge and scanned. Columns: `version, upload_date, GSE_had_PlatformID, reads_GSE_data, platformID_refs_in_GRIP, carries_PlatformID_forward`. Result is uniform: `reads_GSE_data = yes` and `platformID_refs_in_GRIP = 0` for all 64; `carries_PlatformID_forward = NO` for all 64. Reproduce by downloading each file ID from CurseForge and running `grep -rn PlatformID` over its Lua.
+`grip_version_scan.csv` — every GRIP-EMS release v1.0.4 → v2.3.5 (64 files) downloaded from CurseForge and scanned. The current release **v2.3.16 (2026-07-29)** was downloaded and searched separately on that date, with the same result, and is recorded in Appendix A. Columns: `version, upload_date, GSE_had_PlatformID, reads_GSE_data, platformID_refs_in_GRIP, carries_PlatformID_forward`. Result is uniform: `reads_GSE_data = yes` and `platformID_refs_in_GRIP = 0` for all 64; `carries_PlatformID_forward = NO` for all 64. Reproduce by downloading each file ID from CurseForge and running `grep -rn PlatformID` over its Lua.
