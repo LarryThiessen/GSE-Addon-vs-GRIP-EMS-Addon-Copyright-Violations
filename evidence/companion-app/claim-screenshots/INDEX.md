@@ -16,6 +16,7 @@ The actual slides/screenshots from Sataana's `gse-companion-disclosure` and the 
 | 10 | `10_claim_code_signed-directive-engine.png` | The current (0.4.22) **signed** engine: verify → run only if signed & WoW closed → ops `read/deleteKeys/setKey/write`. | Real current capability, but **signature-gated**. The *unsigned* diagnostic upload is the one item to fix. → §3 |
 
 | 11 | `11_tim-operator-statement.png` | **The operator statement (2026-07-29).** GSE's author answering the two questions only he could: there was no server-side `enforce` capable of being set true, the endpoint was a dead end *"wasnt even owned by me"*, he holds *"a total of zero data about anyone using grip"*, and the diagnostic uploaded `GSE.lua` plus the Companion's own files only — now all user-initiated. | Source capture for `../COMPANION-FORENSIC-FINDINGS.md` §1a |
+| 12 | `12_sataana-virus-claim-reads-repo.png` | **Sataana reading this evidence repo, 3:13 AM.** *"Tried to download one of the files in that repo… 😂"* — with his browser's download history showing `GRIP-EMS-v2.3.5.zip` / *Virus detected* — then *"Oh my lord, these writeups are hillarious!"* Establishes he has **read this package and downloaded from it**. On the virus flag, see [`../../PROVENANCE.md`](../../PROVENANCE.md) → "On browser malware warnings". | Notice / awareness |
 
 ---
 

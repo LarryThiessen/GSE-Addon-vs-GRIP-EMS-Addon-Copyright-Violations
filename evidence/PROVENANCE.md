@@ -1,0 +1,68 @@
+# Provenance — the GRIP-EMS release archives
+
+Why seven `.zip` files sit in an evidence repo, where they came from, and how a third party can check them. Six are GRIP-EMS releases; one is GSE itself, so the GSE-side citations can be checked here too.
+
+## What they are
+
+Unmodified GRIP-EMS release packages as distributed by CurseForge, retained because **every code citation in the exhibits points into them**. GRIP-EMS is not published on any public source host, so without these archives no file:line claim in this package can be verified by a reader.
+
+| Archive | CurseForge file ID | CF upload date | Size | SHA-256 |
+|---|---|---|---|---|
+| `GRIP-EMS-v1.0.4.zip` | `7791035` | 2026-03-21 | 343,881 B | `c3f9677d27fe89c79cbd94a93abaaade47f6291a133afd94932a86285a584cbe` |
+| `GRIP-EMS-v1.9.1.zip` | `7918661` | 2026-04-12 | 946,584 B | `4fa4269a89c46c61fbd3f06bfccee21a1b6ca3df1e3f5a1604114ea153cb7602` |
+| `GRIP-EMS-v2.3.5.zip` | `8364957` | 2026-07-03 | 2,652,665 B | `b50ca92e643024fdef84477b325ba0cfaa1056967a077183634d1a8218bd8d2a` |
+| `GRIP-EMS-v2.3.16.zip` | `8537834` | 2026-07-30 | 3,013,594 B | `5c1499cf695b1c82710177566b9ae5eab7c8ccd2edb802378d21d0feff39464e` |
+| `GRIP-EMS-v2.3.17.zip` | `8557810` | 2026-08-01 | 3,047,613 B | `35299aa686e3d7cc3b45b7360db466f88b90bfec5127e5b3ccbd1c902ad26d37` |
+| `GRIP-EMS-v2.3.18.zip` | `8578923` | 2026-08-04 | 3,092,514 B | `ec590cc0f78db732739d600578b2d9dbd1fd8564fcdf9a4fc54c3c75dfcbfac9` |
+| `GSE-3.3.22.zip` | *(GSE project, not GRIP)* | — | 2,553,456 B | `24a12424632f1a6e2e1298af1871308e0ef36675a98462fc01a200106e52dae9` |
+
+Hashes are also in `SHA256SUMS.txt`. Source project: CurseForge project **1489414**, `grip-enhanced-macro-sequencer`, author `sirsataana`.
+
+- **v2.3.17** — published 2026-08-01, the day the copyright claim was filed. **The release that introduced the do-not-share refusal** (`LI.ResolveNoRedistribute`, enforced at nine sites). Retained because it dates that change.
+- **v2.3.18** — published 2026-08-04, **the current release**. Retained to show the conduct is ongoing: `PlatformID` and `HelpURL` still appear zero times, and the migrate path is unchanged.
+- **v1.0.4** — first release in the scan; establishes the GSE-import path existed from the beginning.
+- **v1.9.1** — mid-history control.
+- **v2.3.5** — the version the exhibits cite as operative.
+- **v2.3.16** — the release current as at 2026-07-29, captured that day. Retained to show the conduct is ongoing rather than historical: `PlatformID`, `HelpURL` and `gse.tools` are all absent from its 198 Lua files, and it still reads GSE's internal globals. **File ID `8537834` recorded 2026-07-31** from the file's own CurseForge page (`/files/8537834`), which lists it as `GRIP-EMS-v2.3.16.zip`, uploaded by `sirsataana` on 2026-07-30.
+- **`GSE-3.3.22.zip`** — **GSE**, not GRIP. Added 2026-07-31 so that the GSE-side FILE:LINE citations in `grip-vs-gse-forensic-comparison.md` and `grip-cmi-evidence-exhibit.md` can be checked from this repository rather than requiring a separate download. This is Timothy Luke's addon, retained unmodified for evidentiary comparison only.
+
+## Capture
+
+- **v1.0.4, v1.9.1, v2.3.5** — downloaded from CurseForge's own file endpoints on **2026-07-12** (file timestamps 21:23 local) and committed the same day in `8332cc4`. All three returned **HTTP 200** during that scan, which produced `data/version_scan_raw.csv` (file ID and result for all 64 releases).
+- **v2.3.16** — captured **2026-07-29** as the then-current release. File ID `8537834` was recorded afterwards, on 2026-07-31, from the file's own CurseForge page.
+- **v2.3.17, v2.3.18, GSE-3.3.22** — captured **2026-08-01 → 2026-08-04** as each was published, so the record tracks the project release-by-release rather than sampling it once.
+- No archive has been opened, repacked, or altered — every hash above is the bytes as received.
+- Captured by Larry A. Thiessen ("ScaryLarryGames").
+
+## Why the archives are here, and why that is not a problem
+
+**The releases remain public on CurseForge.** These copies are not a substitute for an unavailable original — anyone can still download the same files from the same project. That is a *feature* of this evidence, not a gap: a third party can re-download, hash, and confirm byte-identity with what is in this directory. Few evidence exhibits are that easy to check.
+
+**What is not available is the source.** Per the rights holder, the GRIP-EMS author's GitHub repositories are **private**, and CurseForge distributes packaged builds only. So there is no public source tree to read or diff — the only way to examine GRIP's Lua, and therefore the only way to check a single `FILE:LINE` citation in the exhibits, is to obtain a release package and unpack it. That is precisely what these archives are, pinned to fixed hashes so the citations always resolve against the same bytes even if a future release renumbers lines. That is not hypothetical: between v2.3.5 and v2.3.16, `Import/LegacyImport.lua` grew from ~900 to 2,396 lines and one cited range moved, while `Engine/StepFunctions.lua:248-262` and `Import/LegacyMigrate.lua:92-99` stayed identical.
+
+Keep these apart:
+
+- **Verifiable by anyone:** that file IDs `7791035` / `7918661` / `8364957` resolve on CurseForge, that their bytes hash to the values above, that `data/version_scan_raw.csv` records all three returning HTTP 200 on 2026-07-12, and that the release currently on the project page hashes to the **v2.3.18** value (`ec590cc0…`, verified 2026-08-07).
+- **On the rights holder's account:** that the author's GitHub repositories are private. Checkable, but not evidenced in this package.
+- **Not claimed at all:** any motive for the repositories being private. This package does not allege one, and nothing here should be read as establishing it.
+
+## How to verify these are genuine
+
+1. `sha256sum -c SHA256SUMS.txt` against the archives in this directory.
+2. **Re-download the same files from CurseForge** (project 1489414, the file IDs above), hash them, and compare. The values must match exactly — this is the check that matters, and it is available to anyone.
+3. `data/version_scan_raw.csv` records the file ID and HTTP result for all 64 releases as fetched on 2026-07-12, if the comparison needs a wider baseline.
+4. Any archive that fails step 1 or 2 should be treated as unreliable, not argued around.
+
+## On browser malware warnings
+
+A browser may flag one of these archives as malicious on download — `evidence/companion-app/claim-screenshots/12_sataana-virus-claim-reads-repo.png` captures exactly that happening to `GRIP-EMS-v2.3.5.zip`. Expect it, and read it correctly:
+
+- **These archives are byte-identical to the author's own CurseForge releases.** Every hash in this document was taken from the package as CurseForge served it, and `sha256sum -c SHA256SUMS.txt` proves the bytes here match. Nothing was added, repacked, or modified. Whatever a scanner objects to, it objects to in the file **as its author distributes it** — the same bytes any user of the addon already has.
+- **A heuristic flag on a WoW addon zip is unremarkable.** Obfuscated or packed Lua, bundled binaries and unusual archive structure all trigger generic heuristics. This package draws **no** conclusion from it: it is **not** alleged that GRIP-EMS contains malware, and nothing here should be read that way.
+- **The hash is the authority, not the download.** If a browser blocks the download, verify from the copies in this repository instead. Any file that hashes to the value listed here is the correct evidence, whatever a scanner says about it.
+
+Recorded because it affects the verification route this document recommends, and because it is better stated plainly than discovered mid-review.
+
+## Scope note
+
+These are the author's own published release packages, retained unmodified for evidentiary comparison and cited for the purpose of criticism and analysis. They are not offered as a download of the addon, and no derivative or modified build is distributed here.

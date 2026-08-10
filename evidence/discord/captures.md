@@ -51,13 +51,19 @@ Search results below are scoped to House of Macros #general (channel ID 12092205
 - **SIGNIFICANT — narrative-building.** This is a hostile Reddit post about GSE shared in-channel, in immediate proximity (same page of search results, adjacent timestamps) to Sataana's forwarded "security report" to Timothy. Suggests coordinated messaging against GSE around the same period. Need to pull the actual Reddit thread content and confirm exact date/authorship of that post separately (it may not be by anyone in this server, but its sharing here is the relevant fact).
 - *(Screenshot reviewed on screen, not written to disk — see the note at the top of this file.)*
 
-**bearded_dad_bod — (same page, date TBD)** (#general):
+**bearded_dad_bod — 2026-07-06 3:40 PM** (#general):
 > "ahh i dont use gse anymore so no worries to watch lol"
 
-**Pershizzle — (same page)** (#general):
+**Pershizzle — 2026-07-06 3:39 PM / 3:35 PM** (#general):
 > "that video kephas put out on gse"
 > "yea he was using it back in gse 2 days and even earlier"
-- Note: references a third party "kephas" and a video about GSE — needs follow-up (search "kephas").
+
+**Sataana — 2026-07-06 3:34 PM** (#general), opening the same exchange:
+> "Im actually surprised a video came out so long after the initial drama"
+
+- **Dates resolved 2026-08-01** (previously logged "(same page, date TBD)"). Re-read at source in Discord; the whole exchange runs 3:34–3:46 PM on **2026-07-06**, five participants.
+- **Why the date matters more than the quotes.** The TheKephas video is carried elsewhere in this package as **≈2026-07-06**, derived from YouTube's relative "23 days ago" label read on 2026-07-29 — the weakest class of date here. This exchange is an independent, exactly-timestamped, in-channel discussion of that video on **2026-07-06**, which anchors the estimate to something a reader can check rather than to a rounded relative label.
+- Sataana's line also supplies the "initial drama" reference. No screenshot retained: the quotes are low-value on their own and the date is the evidentiary point.
 
 > *(Screenshot reviewed on screen, not written to disk — see the note at the top of this file.)* Content: zoom of "gse" search results page 1 (CzarTheMad Reddit post + bearded_dad_bod + Pershizzle).
 
