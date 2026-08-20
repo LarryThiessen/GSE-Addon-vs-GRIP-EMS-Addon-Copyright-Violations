@@ -150,12 +150,13 @@ matter**, and it has **no reference number** (§6c). The acknowledgement email i
 handle on it. Do not let that email be lost, and reply into that thread rather than starting
 anything new.
 
-*(Sequence note: the redirect message telling the rights holder to use the copyright form was
-supplied to this file from the ticket view without its own header date. It necessarily
-precedes the 2026-08-02 acknowledgement and the 2026-08-05 closure. If an exact timestamp is
-needed, take it from the ticket itself.)*
+*(Sequence resolved 2026-08-14 from the mail thread itself: the redirect was sent by
+**Noam V, Sunday 2026-08-02 at 8:21 AM**. The rights holder replied at **9:40 PM** — "Thank
+you very much submitting now" — and the copyright-form acknowledgement arrived at **9:57 PM**
+the same evening, seventeen minutes later. An earlier version of this file recorded the
+redirect date as unknown and the filing as 2026-08-01.)*
 
-## 6c. Filed on the copyright claims form — 2026-08-01
+## 6c. Filed on the copyright claims form — 2026-08-02
 
 Submitted via the dedicated CurseForge Copyright Claims form.
 
@@ -224,6 +225,166 @@ Paste sheet and both attachments kept together in `Desktop\CF-refile-attachments
 - They recommend contacting the other party first; the submission states why that was not
   realistic (the developer has blocked the rights holder).
 
+## 6d. Bump sent — 2026-08-14
+
+Ten business days from the 2026-08-02 acknowledgement expired today with no response. Sent
+**2026-08-14 9:24 PM**, as a reply inside the `copyright@curseforge.com` acknowledgement
+thread, from `scarylarrygames@gmail.com` — the account email — **not** a new submission and
+**not** on the closed ticket.
+
+*(A first attempt was composed in the wrong mailbox: the browser was signed into the rights
+holder's personal address, which is the exact defect that stalled the original claim. Caught
+before anything was sent; switched accounts and sent from the correct one.)*
+
+Contents, in order:
+
+1. Their published turnaround of 10 business days has passed. **One ask only:** has the claim
+   been assigned to a reviewer, and is there a reference number to quote — explicitly *not* a
+   request to expedite the decision.
+2. **A material update, volunteered.** GRIP has published v2.3.17 (2026-08-01) and v2.3.18
+   (2026-08-04). v2.3.17 added a do-not-share refusal that blocks export and player-to-player
+   sharing — **stated to CurseForge as a genuine improvement that partly addresses the
+   remedy asked for**, because conceding it is what makes the rest credible.
+3. **And what defeats it:** the same operators' LazyGrip.net converter does not carry the
+   do-not-share marker, so a sequence the addon would refuse to redistribute becomes
+   redistributable once passed through their website. On 2026-07-30 that converter was
+   amended to carry four other GSE fields; this one was not, and still is not.
+4. In v2.3.18 the author-binding identifier and the link to the owner's listing still appear
+   **zero times**, and there is **no licence check anywhere** in the import or export path.
+5. Pointer to `evidence/POST-COMPLAINT-CHANGES-2026-08-07.md` rather than a re-send of the
+   dossier.
+6. Notes #386456 closed on routing 2026-08-05, so this is the only live matter.
+
+**Next checkpoint: 2026-08-28** (two weeks). If there is still no substantive response by
+then, the next step is **not** a third email. It is an IP lawyer's review of whether to convert
+this into a formal §512 notice to Overwolf's registered agent — with the standing warning
+below still in force. **Also unverified:** whether Overwolf has a DMCA agent registered with
+the U.S. Copyright Office. Confirm that before anyone drafts a formal notice.
+
+## 6e. RESOLVED — claim actioned, project removed — 2026-08-20
+
+**CurseForge, `copyright@curseforge.com`, 2026-08-20 09:31 AM**, in reply to the claim
+acknowledged 2026-08-02:
+
+> Hey Larry A. Thiessen,
+>
+> Thank you for bringing to our attention the copyright claim you submitted regarding the
+> content hosted on CurseForge. We have completed our review of the reported content and have
+> taken the necessary actions as per your request.
+>
+> Please note that if the owner of the reported content has not yet submitted a counter claim,
+> they may still do so. In the event that they do, this matter will be brought into review
+> again, and we will take appropriate action based on the outcome of that review.
+>
+> Thank you for bringing this matter to our attention, and please let us know if you have any
+> further concerns or questions.
+>
+> Happy Modding!
+>
+> CurseForge Team
+
+**Independently verified the same day**, not taken on the email alone:
+
+| Check | Result |
+|---|---|
+| `curseforge.com/wow/addons/grip-enhanced-macro-sequencer` | **404** |
+| Files API, mod 1489414 | `{"data":[],"pagination":{}}` — **empty**; returned six releases on 2026-08-07 |
+| Download of file 8578923 (v2.3.18), pulled 2026-08-07 | **404** |
+| `curseforge.com/members/sirsataana/projects` | **200**, loads normally |
+| GRIP-EMS on that listing | **absent** — zero references |
+| Author's other projects | **GRIP - CORE** and **GRIP - Guild Recruitment** still listed |
+
+The last two rows are what make it conclusive rather than an outage: the author's page serves
+fine and still lists his other addons; only the reported project is gone. Captured pages, the
+API response and SHA-256 hashes: `evidence/takedown-2026-08-20/`.
+
+**Elapsed:** first claim acknowledged 2026-07-13 → actioned 2026-08-20. Thirty-eight days, of
+which roughly nineteen were lost to routing — a personal email not tied to the author account,
+then the wrong portal category, then a support queue that does not handle copyright.
+
+**NOT FINAL.** The reported party may still file a counter claim, which returns the matter to
+review. Consequences:
+
+1. **Change nothing in the package.** No edits in light of the outcome. Every dated
+   correction, withdrawn claim and concession stays exactly where it is — that discipline is
+   what made the filing survive scrutiny, and it is what a second review would test.
+2. **Keep the archives.** v1.0.4, v1.9.1, v2.3.5, v2.3.16, v2.3.17 and v2.3.18 can no longer be
+   downloaded from CurseForge. `evidence/` is now the only durable copy, with hashes and
+   provenance in `PROVENANCE.md`. Do not delete them.
+3. **If a counter claim lands**, do not answer it in anger or at length. The material is
+   already filed and checkable; point to it and let the review run.
+4. **The LazyGrip.net website is untouched by this.** It is not a CurseForge property and was
+   never within the scope of this claim. The converter, the Build-tool route and the published
+   MIT-licensed source all remain as recorded in
+   `evidence/POST-COMPLAINT-CHANGES-2026-08-07.md`.
+
+*(Received in the rights holder's personal mailbox as well as the account address; the message
+header reads "to scarylarrygames", the address the claim was filed from.)*
+
+## 6f. Second platform — Wago Addons — DMCA notice filed 2026-08-20
+
+**Why there is a second filing.** The CurseForge takedown removes the addon from CurseForge and
+nowhere else. GRIP-EMS is also published on **Wago Addons**, an unrelated platform with its own
+process, at `https://addons.wago.io/addons/grip-ems`. It remained live and was still being
+updated after the CurseForge removal.
+
+**The route, and why it differs from CurseForge.** CurseForge took an IP-policy complaint on a
+web form. Wago's Terms of Service §7 require a **formal notice under 17 U.S.C. §512(c)** sent to
+**`dmca@wago.io`**, with the six statutory elements including a statement **under penalty of
+perjury**. There is no policy-complaint alternative published for addon content.
+
+**Risk raised before filing, and the decision.** A §512 notice identifies infringing material
+*hosted by the service*. The GRIP-EMS download does not contain the rights holder's sequences —
+it contains code that copies them on a user's machine. Filing a notice that asserted otherwise
+would be the §512(f) misrepresentation problem this file has flagged since July. The concern was
+put to the rights holder, together with a non-DMCA alternative (a Terms-violation report to
+`contact@wago.io`). **He elected to file the formal notice.** It was drafted to be accurate
+rather than maximal.
+
+**The paragraph that does the work**, in §2 of the notice as sent:
+
+> To be precise about what I am and am not asserting, so that this notice is not misread: I do
+> not claim that the GRIP-EMS download hosted by Wago contains copies of my sequences. It does
+> not. I identify it under the second limb of section 512(c)(3)(A)(iii) as material that is the
+> subject of infringing activity.
+
+The statute — and Wago's own quoted text — covers material "claimed to be infringing **or to be
+the subject of infringing activity**." Volunteering the limit up front means there is nothing for
+a reviewer to discover, and every remaining assertion is checkable. **If this notice is ever
+revised, do not soften that paragraph.**
+
+**Sent:** 2026-08-20, from `scarylarrygames@gmail.com` to `dmca@wago.io`. Contents:
+
+| § | Content |
+|---|---|
+| 1 | The works, All Rights Reserved, licence linked, clauses 2(a)/2(b)/2(d) named |
+| 2 | The addon, v2.4.6, archive SHA-256, and the "subject of infringing activity" framing above |
+| 3 | Five findings: the migrate bulk-copy (quoting Wago's own listing, *"It brings everything over"*), knowledge of origin, the identifier removal, redistribution with no licence check, and the 2026-04-30 Discord planning |
+| 4 | CurseForge's action of 2026-08-20 on the same evidence, framed as context not substitute |
+| 5–7 | Contact, good-faith statement, penalty-of-perjury statement, electronic signature |
+
+**One argument used here that was not available to the CurseForge filing.** Between v2.3.16 and
+v2.4.6 the developer *added and then extended* a do-not-share refusal — now enforced at thirteen
+points — while continuing to discard the owner identifier. He is demonstrably willing and able to
+gate redistribution. Over those same eight releases he changed **8,193 lines across 152 files**
+and added 13 new ones, and touched `LegacyMigrate.lua`, `GRIPExport.lua`, `Transmission.lua` and
+`Engine/Identity.lua` **only to bump a date and a patch string — zero non-header lines in any of
+the four.** Full audit: `evidence/POST-COMPLAINT-CHANGES-2026-08-07.md` and the v2.4.6 archive.
+
+**What can come back, and what to do:**
+
+1. **They act** — listing removed or disabled.
+2. **They ask for clarification**, most likely on §2, since a notice saying "the file does not
+   contain my work" is unusual. Answer with the statutory language, not more evidence.
+3. **A counter-notice under §512(g).** This is the fork that does not exist on the CurseForge
+   side: it obliges Wago to restore the material within 10–14 business days **unless the rights
+   holder has filed a court action**. If a counter-notice arrives, **do not reply personally —
+   that is the point at which an IP lawyer is needed, on a deadline.**
+
+**Note on timing.** §512(c) requires a provider to act "expeditiously" on a compliant notice to
+keep its safe harbour. No fixed period is defined. No arbitrary chase date is set here; a single
+follow-up is reasonable if there is no acknowledgement within a fortnight.
+
 ## 6. Awaiting
 
 - [x] Case/ticket reference — **#386456** (2026-07-31) — **superseded: misrouted to general support, see §6b**
@@ -264,6 +425,10 @@ Paste sheet and both attachments kept together in `Desktop\CF-refile-attachments
 | 2026-08-02 21:57 | Acknowledged from **`copyright@curseforge.com`** — correct project named, **no reference number issued** |
 | 2026-08-05 06:34 | **#386456 formally closed** by Overwolf Support — on routing, never adjudicated |
 | 2026-08-07 | Five days elapsed on the live claim, no update. Inside their stated window. |
+| **2026-08-14 21:24** | **10 business days expired. Bump sent** in the copyright@ thread from the account email — status ask + the v2.3.17/18 findings |
+| **2026-08-20 09:31** | **CLAIM ACTIONED — project 1489414 removed from CurseForge.** Verified: 404, empty files API, gone from the author's listing |
+| — | Counter-claim window open. Nothing in the package altered. Archives retained. |
+| **2026-08-20** | **DMCA §512(c) notice filed with Wago Addons** — second platform, addon still live there |
 | ~2026-08-14 | Earliest expected response (their stated 10 business days) |
 
 ### Anticipated pushback and how to answer it
