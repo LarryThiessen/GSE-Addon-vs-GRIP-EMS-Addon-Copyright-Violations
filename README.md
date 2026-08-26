@@ -76,6 +76,7 @@ The single most important nexus fact: **the same operator (sirsataana/Sataana) i
 | `evidence/lazygrip-webtool/` | Reproducible decode evidence (original + decoded; before/after convert). |
 | `evidence/discord/THE-STORY.md` | **★ Start here.** Plain-English narrative of the House of Macros Discord record — the story in their own words, chronological, for a non-technical reader (Larry, Timothy, or counsel). |
 | `evidence/discord/captures.md` | Full verbatim capture log backing the story above — every quote, decoded UTC timestamp, and permalink. |
+| `evidence/cited-source/` | **Every source file any `FILE:LINE` citation in this package resolves into**, extracted unmodified from the official release archives at their original relative paths — 117 files across v1.0.4→v2.4.7, with a `README.md` covering line-number drift between releases and how to confirm byte-identity. *The full packages were withdrawn on 2026-08-26 once every platform stopped serving those releases; hashes remain in `evidence/PROVENANCE.md`, which records the request and what was verified before acting.* |
 | `data/grip_version_scan.csv` | Per-version scan of all 64 GRIP releases. |
 
 ---
