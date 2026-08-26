@@ -126,6 +126,14 @@ Being honest here is what lets the rest stand up. If GRIP had copied then merely
 
 - GSE encrypts protected/subscriber content with a **ChaCha20 cipher + embedded key** (`GSE/API/Codec.lua`). GRIP has **no decryptor** and refuses that content outright. A copy would carry the cipher.
 - GSE's most distinctive engineered artifact — the **CBOR delta/diff sync engine** (`GSE/API/SequenceDelta.lua`) — is **entirely absent** from GRIP.
+
+> **Note on verifying these two bullets (added 2026-08-01).** `GSE/API/Codec.lua` and
+> `GSE/API/SequenceDelta.lua` live in the **GSE source repository**, not in the packaged
+> CurseForge release — neither file is present in `evidence/GSE-3.3.22.zip`. Checking these
+> claims against a downloaded release will therefore appear to disprove them; check the source
+> tree. Both were re-verified in source on 2026-08-01: `Codec.lua` implements ChaCha20 (sigma
+> constants `1634760805, 857760878, 2036477234, 1797285236`; quarter-round rotations 16/12/8/7;
+> ten double-rounds), and `SequenceDelta.lua` is 352 lines of CBOR delta/diff code.
 - GRIP's **ReversePriority and Random modes diverge** from GSE's; a line copy would have inherited them unchanged.
 - Every field is systematically renamed and every structure reorganized; GSE's signature interleaved-numbered-key block layout is discarded for a clean `children[]` array.
 
@@ -280,11 +288,15 @@ Run against the v2.3.5 archive hashed above (unpack it, or grep the archive dire
 | `Checksum` | 30 | **Not zero, and the claim is not that it is.** GRIP has its own checksum concept. The finding is narrower: GSE's *Ed25519 server-signed* `Checksum` is not carried into what GRIP exports or shares. Do not overstate this row. |
 
 ```bash
-# verify the artifact first, then the counts
-sha256sum -c SHA256SUMS.txt
-unzip -o GRIP-EMS-v2.3.5.zip -d grip235
-grep -ric "PlatformID" grip235/ | grep -v ':0$' || echo "PlatformID: zero occurrences"
+# from evidence/ in this repository - the cited sources, extracted unmodified
+grep -ric "PlatformID" cited-source/v2.3.5/ | grep -v ':0$' || echo "PlatformID: zero occurrences"
+grep -ric "HelpURL"    cited-source/v2.3.5/ | grep -v ':0$' || echo "HelpURL: zero occurrences"
 ```
+
+*The counts above were originally taken across all 182 Lua files of the full v2.3.5 package. The
+full package is no longer published here (`PROVENANCE.md`, 2026-08-26 addendum); `cited-source/`
+carries the files this exhibit cites. Its SHA-256 remains in `SHA256SUMS.txt` for anyone holding
+a copy of the original archive.*
 
 Confirmed on 2026-07-29 against the hashed archive. `PlatformID`, `HelpURL` and `gse.tools` each returned zero across all 182 Lua files.
 
